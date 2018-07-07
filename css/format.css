@@ -7,6 +7,17 @@ h1 {
     color: white;
     font-size: 19px;
 }
+body {
+	background-color: black;
+	background-image: url("../images/wallpaper_glow.jpg");
+	background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+
+}
 #footer {
 	color: cyan;
 }
