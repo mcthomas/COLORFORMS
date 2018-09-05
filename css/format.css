@@ -5,7 +5,7 @@
 h1 {
     text-align: center;
     color: white;
-    font-size: 19px;
+    font-size: 15px;
 }
 body {
 	background-color: black;
@@ -15,7 +15,6 @@ body {
 //	-moz-background-size: cover;
 //	-webkit-background-size: cover;
     background-position: center; 
-
 //	background-size: 100% 100%;
 	background-repeat: no-repeat;
 
