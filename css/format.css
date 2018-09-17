@@ -4,10 +4,10 @@
 }
 body {
 	background-image: url("../images/wallpaper.jpg");
-	margin-top: 0px;
 	background-color: black;
     background-position: center; 
 	background-repeat: no-repeat;
+	margin-top:0px;
 
 }
 //#footer {
