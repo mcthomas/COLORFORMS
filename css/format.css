@@ -2,11 +2,6 @@
     font-family: ProFont;
     src: url(../fonts/ProFont.ttf);
 }
-h1 {
-    text-align: center;
-    color: white;
-    font-size: 15px;
-}
 body {
 	background-image: url("../images/wallpaper.jpg?80172489074");
 	background-color: black;
