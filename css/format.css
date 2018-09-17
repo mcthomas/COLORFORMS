@@ -2,6 +2,9 @@
     font-family: ProFont;
     src: url(../fonts/ProFont.ttf);
 }
+html {
+min-height: 100%;
+}
 body {
 	background-image: url("../images/wallpaper.jpg?123");
     background-image: url("../images/wallpaper.jpg?1234");
