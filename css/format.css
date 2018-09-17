@@ -2,12 +2,9 @@
     font-family: ProFont;
     src: url(../fonts/ProFont.ttf);
 }
-html {
-min-height: 100%;
-}
 body {
-	background-image: url("../images/wallpaper.jpg?123");
-    background-image: url("../images/wallpaper.jpg?1234");
+	background-image: url("../images/wallpaper.jpg");
+	margin-top: 0px;
 	background-color: black;
     background-position: center; 
 	background-repeat: no-repeat;
