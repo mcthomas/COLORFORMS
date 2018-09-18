@@ -1,16 +1,9 @@
-@font-face {
-    font-family: ProFont;
-    src: url(../fonts/ProFont.ttf);
-}
 body {
 	background-image: url("../images/wallpaper.jpg");
 	background-color: black;
     background-position: center; 
 	background-repeat: no-repeat;
 }
-//#footer {
-//	color: cyan;
-//}
 #imagesMain {
   padding: 0;
   margin-left: auto;
