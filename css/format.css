@@ -4,6 +4,14 @@ body {
     background-position: center; 
 	background-repeat: no-repeat;
 }
+#flux {
+
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    vertical-align: middle;
+}
 #imagesMain {
   padding: 0;
   margin-left: auto;
