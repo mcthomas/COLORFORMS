@@ -1,0 +1,1 @@
+dice=(⚀ ⚁ ⚂ ⚃ ⚄ ⚅); printf ${dice[1 + RANDOM % 6]}; printf '%s\n' " ${dice[1 + RANDOM % 6]}"
