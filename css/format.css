@@ -1,30 +1,101 @@
 body {
-	background-image: url("../images/wallpaper.jpg");
+	
 	background-color: black;
-    background-position: center; 
+    background-position: top;
 	background-repeat: no-repeat;
-}
-#flux {
-
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    margin-top: 0px;
     text-align: center;
     vertical-align: middle;
+    width: 50%;
+    padding: 10px;
+    
 }
+
+#flux {
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid red;
+    padding: 11px;
+}
+
+#flight {
+    margin: auto;
+    margin-top: 11px;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid green;
+    padding: 11px;
+}
+
+#cliffs {
+    margin: auto;
+    margin-top: 11px;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid blue;
+    padding: 11px;
+}
+
+#dc {
+    margin: auto;
+    margin-top: 11px;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid purple;
+    padding: 11px;
+}
+
+#fireworks {
+    margin: auto;
+    margin-top: 11px;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid red;
+    padding: 11px;
+}
+
+#mondrian {
+    margin: auto;
+    margin-top: 11px;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid green;
+    padding: 11px;
+}
+
+#logan {
+    margin: auto;
+    margin-top: 11px;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid blue;
+    padding: 11px;
+}
+
+#git {
+    margin: auto;
+    margin-top: 11px;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid blue;
+    padding: 11px;
+}
+
 #imagesMain {
   padding: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 400px;
-  text-align: center;
 }
+
 #imagesMain img {
   padding: 50px;
   height: 50px;
   width: 50px;
   vertical-align: middle;
 }
+
 #imagesSocial {
   padding: 0;
   margin-left: auto;
@@ -32,6 +103,7 @@ body {
   margin-top: 75px;
   text-align: center;
 }
+
 #imagesSocial img {
   padding: 5px;
   height: 25px;
@@ -39,6 +111,56 @@ body {
   vertical-align: middle;
 }
 
+.fade-in {
+  animation: fadeIn ease 10s;
+  -webkit-animation: fadeIn ease 10s;
+  -moz-animation: fadeIn ease 10s;
+  -o-animation: fadeIn ease 10s;
+  -ms-animation: fadeIn ease 10s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+}
 
 
 
