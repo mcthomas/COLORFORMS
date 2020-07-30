@@ -1,86 +1,16 @@
 body {
 	
-	background-color: black;
-    background-position: top;
-	background-repeat: no-repeat;
+    #background-image: url("../images/bg.png");
+    background-position: center;
+	background-repeat: repeat;
     margin: auto;
     margin-top: 0px;
     text-align: center;
     vertical-align: middle;
     width: 50%;
     padding: 10px;
+    background-color: grey;
     
-}
-
-#flux {
-    margin: auto;
-    text-align: center;
-    vertical-align: middle;
-    border: 2px solid red;
-    padding: 11px;
-}
-
-#flight {
-    margin: auto;
-    margin-top: 11px;
-    text-align: center;
-    vertical-align: middle;
-    border: 2px solid green;
-    padding: 11px;
-}
-
-#cliffs {
-    margin: auto;
-    margin-top: 11px;
-    text-align: center;
-    vertical-align: middle;
-    border: 2px solid blue;
-    padding: 11px;
-}
-
-#dc {
-    margin: auto;
-    margin-top: 11px;
-    text-align: center;
-    vertical-align: middle;
-    border: 2px solid purple;
-    padding: 11px;
-}
-
-#fireworks {
-    margin: auto;
-    margin-top: 11px;
-    text-align: center;
-    vertical-align: middle;
-    border: 2px solid red;
-    padding: 11px;
-}
-
-#mondrian {
-    margin: auto;
-    margin-top: 11px;
-    text-align: center;
-    vertical-align: middle;
-    border: 2px solid green;
-    padding: 11px;
-}
-
-#logan {
-    margin: auto;
-    margin-top: 11px;
-    text-align: center;
-    vertical-align: middle;
-    border: 2px solid blue;
-    padding: 11px;
-}
-
-#git {
-    margin: auto;
-    margin-top: 11px;
-    text-align: center;
-    vertical-align: middle;
-    border: 2px solid blue;
-    padding: 11px;
 }
 
 #imagesMain {
@@ -94,6 +24,66 @@ body {
   height: 50px;
   width: 50px;
   vertical-align: middle;
+}
+
+#year {
+    border: 2px solid white;
+    border-image-width: 20px;
+}
+
+#flux {
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    border-left: 5px solid red;
+}
+
+#flight {
+    margin: auto;
+    margin-top: 11px;
+    text-align: center;
+    vertical-align: middle;
+    border-left: 5px solid orange;
+}
+
+#cliffs {
+    margin: auto;
+    margin-top: 11px;
+    text-align: center;
+    vertical-align: middle;
+    border-left: 5px solid yellow;
+}
+
+#dc {
+    margin: auto;
+    margin-top: 11px;
+    text-align: center;
+    vertical-align: middle;
+    border-left: 5px solid green;
+}
+
+#fireworks {
+    margin: auto;
+    margin-top: 11px;
+    text-align: center;
+    vertical-align: middle;
+    border-left: 5px solid blue;
+}
+
+#mondrian {
+    margin: auto;
+    margin-top: 11px;
+    text-align: center;
+    vertical-align: middle;
+    border-left: 5px solid purple;
+}
+
+#logan {
+    margin: auto;
+    margin-top: 11px;
+    text-align: center;
+    vertical-align: middle;
+    border-left: 5px solid red;
 }
 
 #imagesSocial {
