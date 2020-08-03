@@ -3,8 +3,7 @@ body {
     margin: auto;
     margin-top: 0px;
     text-align: center;
-    vertical-align: middle;
-    width: 50%;
+    width: 57%;
     padding: 10px;
     background-color: #3c3d3c;
 
@@ -15,6 +14,16 @@ body {
     border-width:7px;
     border-style:solid;
     border-color:white;
+}
+
+#title{
+     text-transform:uppercase;
+     color:white;
+     font-size:22px;
+     font-family:Menlo;
+     display:block;
+     margin:auto;
+     letter-spacing:1em;
 }
 
 #imagesMain {
@@ -55,7 +64,7 @@ body {
 
 #flight {
     margin: auto;
-    margin-top: 11px;
+    margin-top: 12px;
     text-align: center;
     vertical-align: middle;
     border-left: 5px solid orange;
@@ -63,7 +72,7 @@ body {
 
 #cliffs {
     margin: auto;
-    margin-top: 11px;
+    margin-top: 12px;
     text-align: center;
     vertical-align: middle;
     border-left: 5px solid yellow;
@@ -71,7 +80,7 @@ body {
 
 #dc {
     margin: auto;
-    margin-top: 11px;
+    margin-top: 12px;
     text-align: center;
     vertical-align: middle;
     border-left: 5px solid green;
@@ -79,7 +88,7 @@ body {
 
 #fireworks {
     margin: auto;
-    margin-top: 11px;
+    margin-top: 12px;
     text-align: center;
     vertical-align: middle;
     border-left: 5px solid blue;
@@ -87,7 +96,7 @@ body {
 
 #mondrian {
     margin: auto;
-    margin-top: 11px;
+    margin-top: 12px;
     text-align: center;
     vertical-align: middle;
     border-left: 5px solid purple;
@@ -95,7 +104,7 @@ body {
 
 #logan {
     margin: auto;
-    margin-top: 11px;
+    margin-top: 12px;
     text-align: center;
     vertical-align: middle;
     border-left: 5px solid red;
