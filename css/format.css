@@ -13,8 +13,8 @@ body {
 .framed {
     min-height:95%;
     border-width:7px;
-    border-style:groove;
-    border-color:var(black);
+    border-style:solid;
+    border-color:white;
 }
 
 #imagesMain {
@@ -28,6 +28,17 @@ body {
   height: 56px;
   width: 56px;
   vertical-align: middle;
+  opacity: 1.0;
+  transition: opacity .55s ease-in-out;
+  -moz-transition: opacity .55s ease-in-out;
+  -webkit-transition: opacity .55s ease-in-out;
+}
+
+#imagesMain img:hover {
+    opacity: .5;
+                  transition: opacity .55s ease-in-out;
+                  -moz-transition: opacity .55s ease-in-out;
+                  -webkit-transition: opacity .55s ease-in-out;
 }
 
 #year {
@@ -103,6 +114,17 @@ body {
   height: 36px;
   width: 36px;
   vertical-align: middle;
+  opacity: 1.0;
+  transition: opacity .55s ease-in-out;
+  -moz-transition: opacity .55s ease-in-out;
+  -webkit-transition: opacity .55s ease-in-out;
+}
+
+#imagesSocial img:hover {
+    opacity: .5;
+                  transition: opacity .55s ease-in-out;
+                  -moz-transition: opacity .55s ease-in-out;
+                  -webkit-transition: opacity .55s ease-in-out;
 }
 
 .fade-in {
