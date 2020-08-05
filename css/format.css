@@ -2,7 +2,7 @@
 #title{
      text-transform:uppercase;
      color:white;
-     font-size:22px;
+     font-size:25px;
      font-family:Menlo;
      display:block;
      margin:auto;
@@ -34,7 +34,7 @@ body{
     margin-bottom: 12px;
 }
 .feedItem{
-    margin:75px;
+    margin:85px;
 }
 .red{
     border-color:red;
@@ -62,7 +62,7 @@ body{
 }
 #iconsLarge img {
   padding: 50px;
-  width: 56px;
+  width: 65px;
   opacity: 1.0;
   transition: opacity .55s ease-in-out;
   -moz-transition: opacity .55s ease-in-out;
@@ -75,7 +75,7 @@ body{
         -webkit-transition: opacity .55s ease-in-out;
 }
 #iconsSmall img {
-  width: 36px;
+  width: 45px;
   padding: 5px;
   margin-top: 50px;
   margin-bottom:100px;
