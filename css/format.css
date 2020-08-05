@@ -6,6 +6,7 @@
      font-family:Menlo;
      display:block;
      margin:auto;
+     margin-bottom:100px;
      letter-spacing:1em;
 }
 /*end:text*/
@@ -25,10 +26,15 @@ body{
 /*end:layout*/
 
 /*begin:elements*/
-
+#portrait{
+    margin:100px;
+}
 .feed{
     margin-top: 12px;
     margin-bottom: 12px;
+}
+.feedItem{
+    margin:75px;
 }
 .red{
     border-color:red;
@@ -71,6 +77,8 @@ body{
 #iconsSmall img {
   width: 36px;
   padding: 5px;
+  margin-top: 50px;
+  margin-bottom:100px;
   opacity: 1.0;
   transition: opacity .55s ease-in-out;
   -moz-transition: opacity .55s ease-in-out;
