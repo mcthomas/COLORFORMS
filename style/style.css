@@ -6,15 +6,15 @@
      font-family:Menlo;
      display:block;
      margin:auto;
-     margin-bottom:120px;
+     margin-bottom:80px;
      letter-spacing:1em;
 }
 /*end:text*/
 
 /*begin:layout*/
 body{
-    margin: auto;
-    text-align: center;
+    margin:auto;
+    text-align:center;
     background:linear-gradient(#3c3d3c, #1e1e1e);
 }
 .framed{
@@ -26,6 +26,10 @@ body{
 /*end:layout*/
 
 /*begin:elements*/
+#line{
+    width:49%;
+    margin:auto;
+}
 #portrait{
     margin:120px;
 }
