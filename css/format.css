@@ -56,7 +56,6 @@ body{
 }
 #iconsLarge img {
   padding: 50px;
-  height: 56px;
   width: 56px;
   opacity: 1.0;
   transition: opacity .55s ease-in-out;
@@ -70,7 +69,6 @@ body{
         -webkit-transition: opacity .55s ease-in-out;
 }
 #iconsSmall img {
-  height: 36px;
   width: 36px;
   padding: 5px;
   opacity: 1.0;
