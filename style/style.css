@@ -6,7 +6,7 @@
      font-family:Menlo;
      display:block;
      margin:auto;
-     margin-bottom:100px;
+     margin-bottom:120px;
      letter-spacing:1em;
 }
 /*end:text*/
@@ -27,7 +27,7 @@ body{
 
 /*begin:elements*/
 #portrait{
-    margin:100px;
+    margin:120px;
 }
 .feed{
     margin-top: 12px;
@@ -61,8 +61,8 @@ body{
     border-left: 7px solid purple;
 }
 #iconsLarge img {
-  padding: 50px;
-  width: 65px;
+  padding: 55px;
+  width: 70px;
   opacity: 1.0;
   transition: opacity .55s ease-in-out;
   -moz-transition: opacity .55s ease-in-out;
@@ -75,10 +75,10 @@ body{
         -webkit-transition: opacity .55s ease-in-out;
 }
 #iconsSmall img {
-  width: 45px;
+  width: 50px;
   padding: 5px;
   margin-top: 50px;
-  margin-bottom:100px;
+  margin-bottom:120px;
   opacity: 1.0;
   transition: opacity .55s ease-in-out;
   -moz-transition: opacity .55s ease-in-out;
