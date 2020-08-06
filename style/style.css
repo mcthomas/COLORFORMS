@@ -23,9 +23,6 @@ body{
     border-style:solid;
     border-color:white;
 }
-.framed *{
-    max-width:100%;
-}
 /*end:layout*/
 
 /*begin:elements*/
