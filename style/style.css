@@ -23,6 +23,14 @@ body{
     border-style:solid;
     border-color:white;
 }
+@media only screen and (max-width: 828px){
+    #iconsLarge img{
+        width:100px;
+    }
+    #iconsSmall img{
+        width:80px;
+    }
+}
 /*end:layout*/
 
 /*begin:elements*/
