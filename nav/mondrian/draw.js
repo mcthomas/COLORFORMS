@@ -7,7 +7,7 @@ function setup() { "use strict";
     slider2.value = 50;
     var button1 = document.getElementById('button1');
     
-    var hues = ["dc2e10", "ffc701", "020877", "12080c", "e5e5e5"];
+    var hues = ["#dc2e10", "#ffc701", "#020877", "#12080c", "#e5e5e5"];
     
     var coords = [
                   [10, 10],
