@@ -253,8 +253,6 @@ function setup() { "use strict";
     setResetX();
 
     slider1.addEventListener("input",draw);
-    slider2.addEventListener("input",draw);
-    slider3.addEventListener("input",draw);
     
     draw();
     
