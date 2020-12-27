@@ -1,5 +1,5 @@
 # mcthomas.github.io
-A personal feed for my content, and a pseudo-blog: https://mcthomas
+A personal feed for my content, and a pseudo-blog: https://mcthomas.github.io
 
 ## Interactive Animations (select any gif)
 
