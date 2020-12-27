@@ -5,12 +5,16 @@ A personal feed for my content, and a pseudo-blog: https://mcthomas
 
 ### Train
 
-<img src="readme-gifs/train.gif" width="600"/>
+[![train gif](readme-gifs/train.gif)](https://mcthomas.github.io/nav/train/index.html)
 
 ### Flight Paths
 
-<img src="readme-gifs/flight.gif" width="600"/>
+[![flight gif](readme-gifs/flight.gif)](https://mcthomas.github.io/nav/flight/index.html)
 
 ### Arwing
 
-<img src="readme-gifs/arwing.gif" width="600"/>
+[![arwing gif](readme-gifs/arwing.gif)](https://mcthomas.github.io/nav/arwing/index.html)
+
+### Mondrian
+
+[![mondrian gif](readme-gifs/mondrian.gif)](https://mcthomas.github.io/nav/mondrian/index.html)
