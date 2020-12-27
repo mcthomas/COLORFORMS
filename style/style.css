@@ -1,9 +1,14 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Light.ttf') format("truetype");
+}
+
 /*begin:text*/
 #title{
      text-transform:uppercase;
      color:white;
      font-size:25px;
-     font-family:Menlo;
+     font-family: 'Lato';
      display:block;
      margin:auto;
      margin-bottom:80px;
@@ -145,3 +150,4 @@ body{
     opacity:1;
 }
 /*end:effects*/
+
