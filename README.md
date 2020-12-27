@@ -14,7 +14,3 @@ A personal feed for my content, and a pseudo-blog: https://mcthomas
 ### Arwing
 
 [![arwing gif](readme-gifs/arwing.gif)](https://mcthomas.github.io/nav/arwing/index.html)
-
-### Mondrian
-
-[![mondrian gif](readme-gifs/mondrian.gif)](https://mcthomas.github.io/nav/mondrian/index.html)
