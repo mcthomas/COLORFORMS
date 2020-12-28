@@ -34,12 +34,15 @@
             right: 30px;
             top: 30px;
         }
-#vCard
+#vCard img
         {
             position: fixed;
             padding: 8px;
             right: 25px;
-            bottom: 21px;
+            bottom: 25px;
+            transition: opacity .55s ease-in-out;
+            -moz-transition: opacity .55s ease-in-out;
+            -webkit-transition: opacity .55s ease-in-out;
         }
 
 #title{
@@ -139,6 +142,12 @@ body{
         -webkit-transition: opacity .55s ease-in-out;
 }
 #microblog:hover {
+    opacity: .5;
+        transition: opacity .55s ease-in-out;
+        -moz-transition: opacity .55s ease-in-out;
+        -webkit-transition: opacity .55s ease-in-out;
+}
+#vCard img:hover {
     opacity: .5;
         transition: opacity .55s ease-in-out;
         -moz-transition: opacity .55s ease-in-out;
