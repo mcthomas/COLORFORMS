@@ -3,6 +3,19 @@
   src: url('fonts/Lato-Light.ttf') format("truetype");
 }
 
+#percentage
+        {
+            position: fixed;
+            font-size: 20px;
+            font-family: 'Lato';
+            padding: 8px;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            right: 65px;
+            top: 50px;
+        }
+
 /*begin:text*/
 #title{
      text-transform:uppercase;
