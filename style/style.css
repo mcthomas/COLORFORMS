@@ -44,6 +44,20 @@
             -moz-transition: opacity .55s ease-in-out;
             -webkit-transition: opacity .55s ease-in-out;
         }
+#resume {
+    text-align:left;
+}
+#resume img
+        {
+            width: 3.9%;
+            position: relative;
+            padding: 8px;
+            right: 1px;
+            bottom: -1px;
+            transition: opacity .55s ease-in-out;
+            -moz-transition: opacity .55s ease-in-out;
+            -webkit-transition: opacity .55s ease-in-out;
+        }
 
 #title{
      text-transform:uppercase;
@@ -148,6 +162,12 @@ body{
         -webkit-transition: opacity .55s ease-in-out;
 }
 #vCard img:hover {
+    opacity: .5;
+        transition: opacity .55s ease-in-out;
+        -moz-transition: opacity .55s ease-in-out;
+        -webkit-transition: opacity .55s ease-in-out;
+}
+#resume img:hover {
     opacity: .5;
         transition: opacity .55s ease-in-out;
         -moz-transition: opacity .55s ease-in-out;
