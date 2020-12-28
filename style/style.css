@@ -34,6 +34,13 @@
             right: 30px;
             top: 30px;
         }
+#vCard
+        {
+            position: fixed;
+            padding: 8px;
+            right: 25px;
+            bottom: 21px;
+        }
 
 #title{
      text-transform:uppercase;

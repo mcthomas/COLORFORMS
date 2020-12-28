@@ -1,0 +1,102 @@
+/*begin:text*/
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Light.ttf') format("truetype");
+}
+
+#title{
+     text-transform:uppercase;
+     color:white;
+     font-size:25px;
+     font-family: 'Lato';
+     display:block;
+     margin:auto;
+     margin-bottom:80px;
+     letter-spacing:1em;
+}
+/*end:text*/
+
+#highlights
+        {
+            position: absolute;
+            font-size: 20px;
+            font-family: 'Lato';
+            padding: 8px;
+            color: white;
+            border-style: solid;
+            border-radius: 20px;
+            left: 30px;
+            top: 30px;
+            opacity: 1.0;
+            transition: opacity .55s ease-in-out;
+            -moz-transition: opacity .55s ease-in-out;
+            -webkit-transition: opacity .55s ease-in-out;
+        }
+
+/*begin:layout*/
+body{
+    margin:auto;
+    text-align:center;
+    background:linear-gradient(#c0c0c0s);
+}
+.framed{
+    min-height:95%;
+    border-width:14px;
+    border-style:solid;
+    border-color:white;
+}
+
+/*end:layout*/
+
+/*begin:elements*/
+/*end:elements*/
+
+/*begin:effects*/
+.fade-in{
+  animation: fadeIn ease 10s;
+  -webkit-animation: fadeIn ease 10s;
+  -moz-animation: fadeIn ease 10s;
+  -o-animation: fadeIn ease 10s;
+  -ms-animation: fadeIn ease 10s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+}
+/*end:effects*/
