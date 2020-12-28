@@ -3,6 +3,10 @@ A personal feed for my content, and a pseudo-blog: https://mcthomas.github.io
 
 ## Interactive Animations (select any gif)
 
+### Mondrian Generator
+
+[![mondrian gif](readme-gifs/mondrian.gif)](https://mcthomas.github.io/nav/mondrian/index.html)
+
 ### Train
 
 [![train gif](readme-gifs/train.gif)](https://mcthomas.github.io/nav/train/index.html)
