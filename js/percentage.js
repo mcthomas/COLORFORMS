@@ -10,15 +10,15 @@ window.onscroll = function(){
    {
        var total = bodyHeight - heightOfWindow;
        var got = contentScrolled;
-       if(parseInt((got/total) * 100) <= 30)
+       if(parseInt((got/total) * 100) <= 29)
        {
             window.document.getElementById("percentage").innerHTML = "2020";
        }
-       else if(parseInt((got/total) * 100) <= 56)
+       else if(parseInt((got/total) * 100) <= 55)
        {
             window.document.getElementById("percentage").innerHTML = "2019";
        }
-       else if(parseInt((got/total) * 100) <= 83)
+       else if(parseInt((got/total) * 100) <= 82)
        {
             window.document.getElementById("percentage").innerHTML = "2018";
        }
