@@ -1,86 +1,41 @@
 /*begin:text*/
-
 @font-face {
   font-family: 'Lato';
-  src: url('fonts/Lato-Hairline.ttf') format("truetype");
+  src: url('fonts/Lato-Thin.ttf') format("truetype");
+}
+#microblog {
+        position: absolute;
+        font-size: 20px;
+        font-family: 'Lato';
+        padding: 8px;
+        background-color: rgba(255,255,255,.5);
+        color: black;
+        border: 3px solid white;
+        border-style: solid;
+        border-radius: 20px;
+        left: 30px;
+        top: 30px;
+        opacity: 1.0;
+        transition: opacity .55s ease-in-out;
+        -moz-transition: opacity .55s ease-in-out;
+        -webkit-transition: opacity .55s ease-in-out;
+    }
+#percentage {
+    position: fixed;
+    font-size: 20px;
+    font-family: 'Lato';
+    padding: 8px;
+    color: white;
+    border-style: solid;
+    border-radius: 20px;
+    right: 30px;
+    top: 30px;
 }
 
-#microblog
-        {
-            position: absolute;
-            font-size: 20px;
-            font-family: 'Lato';
-            padding: 8px;
-            background-color: rgba(255,255,255,.5);
-            color: black;
-            border: 3px solid white;
-            border-style: solid;
-            border-radius: 20px;
-            left: 30px;
-            top: 30px;
-            opacity: 1.0;
-            transition: opacity .55s ease-in-out;
-            -moz-transition: opacity .55s ease-in-out;
-            -webkit-transition: opacity .55s ease-in-out;
-        }
-
-#percentage
-        {
-            position: fixed;
-            font-size: 20px;
-            font-family: 'Lato';
-            padding: 8px;
-            color: white;
-            border-style: solid;
-            border-radius: 20px;
-            right: 30px;
-            top: 30px;
-        }
-#vCard img
-        {
-            position: fixed;
-            padding: 8px;
-            right: 25px;
-            bottom: 25px;
-            transition: opacity .55s ease-in-out;
-            -moz-transition: opacity .55s ease-in-out;
-            -webkit-transition: opacity .55s ease-in-out;
-        }
 #resume {
     text-align:left;
 }
-#resume img
-        {
-            width: 63px;
-            position: relative;
-            padding: 8px;
-            right: 1px;
-            bottom: -1px;
-            transition: opacity .55s ease-in-out;
-            -moz-transition: opacity .55s ease-in-out;
-            -webkit-transition: opacity .55s ease-in-out;
-        }
-
-.button {
-  font-family: 'Lato';
-  font-size:16px;
-  background-color: rgba(255,255,255,.5);
-  color: black;
-  border: 2px solid white;
-  border-radius: 12px;
-  transition: opacity .55s ease-in-out;
-  -moz-transition: opacity .55s ease-in-out;
-  -webkit-transition: opacity .55s ease-in-out;
-}
-
-.buttonHover:hover {
-  opacity: .5;
-      transition: opacity .55s ease-in-out;
-      -moz-transition: opacity .55s ease-in-out;
-      -webkit-transition: opacity .55s ease-in-out;
-}
-
-#title{
+#title {
      text-transform:uppercase;
      color:white;
      font-size:30px;
@@ -93,18 +48,17 @@
 /*end:text*/
 
 /*begin:layout*/
-body{
+body {
     margin:auto;
     text-align:center;
     background:linear-gradient(#c0c0c0, #1e1e1e);
 }
-.framed{
+.framed {
     min-height:95%;
     border-width:14px;
     border-style:solid;
     border-color:white;
 }
-
 /*end:layout*/
 
 /*begin:elements*/
@@ -146,6 +100,42 @@ body{
     border-color:purple;
     border-left: 7px solid rgba(128, 0, 128, 0.5);
 }
+.button {
+  font-family: 'Lato';
+  font-size:16px;
+  background-color: rgba(255,255,255,.5);
+  color: black;
+  border: 2px solid white;
+  border-radius: 12px;
+  transition: opacity .55s ease-in-out;
+  -moz-transition: opacity .55s ease-in-out;
+  -webkit-transition: opacity .55s ease-in-out;
+}
+.buttonHover:hover {
+  opacity: .5;
+      transition: opacity .55s ease-in-out;
+      -moz-transition: opacity .55s ease-in-out;
+      -webkit-transition: opacity .55s ease-in-out;
+}
+#resume img {
+    width: 63px;
+    position: relative;
+    padding: 8px;
+    right: 1px;
+    bottom: -1px;
+    transition: opacity .55s ease-in-out;
+    -moz-transition: opacity .55s ease-in-out;
+    -webkit-transition: opacity .55s ease-in-out;
+}
+#vCard img {
+    position: fixed;
+    padding: 8px;
+    right: 25px;
+    bottom: 25px;
+    transition: opacity .55s ease-in-out;
+    -moz-transition: opacity .55s ease-in-out;
+    -webkit-transition: opacity .55s ease-in-out;
+}
 #iconsLarge img {
   padding: 55px;
   width: 70px;
@@ -161,11 +151,11 @@ body{
         -webkit-transition: opacity .55s ease-in-out;
 }
 #iconsSmall img {
-  width: 50px;
   padding: 5px;
+  width: 50px;
+  opacity: 1.0;
   margin-top: 50px;
   margin-bottom:120px;
-  opacity: 1.0;
   transition: opacity .55s ease-in-out;
   -moz-transition: opacity .55s ease-in-out;
   -webkit-transition: opacity .55s ease-in-out;
@@ -197,7 +187,7 @@ body{
 /*end:elements*/
 
 /*begin:effects*/
-.fade-in{
+.fade-in {
   animation: fadeIn ease 10s;
   -webkit-animation: fadeIn ease 10s;
   -moz-animation: fadeIn ease 10s;
