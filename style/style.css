@@ -59,6 +59,9 @@ body {
     border-style:solid;
     border-color:white;
 }
+a {
+    text-decoration:none;
+}
 /*end:layout*/
 
 /*begin:elements*/
