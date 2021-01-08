@@ -81,27 +81,27 @@ a {
 }
 .red{
     border-color:red;
-    border-left: 7px solid rgba(255, 0, 0, 0.5);
+    border-left: 1px solid rgba(255, 0, 0, 0.5);
 }
 .orange{
     border-color:orange;
-    border-left: 7px solid rgba(255, 165, 0, 0.5);
+    border-left: 1px solid rgba(255, 165, 0, 0.5);
 }
 .yellow{
     border-color:yellow;
-    border-left: 7px solid rgba(254, 255, 0, 0.5);
+    border-left: 1px solid rgba(254, 255, 0, 0.5);
 }
 .green{
     border-color:green;
-    border-left: 7px solid rgba(0, 128, 1, 0.5);
+    border-left: 1px solid rgba(0, 128, 1, 0.5);
 }
 .blue{
     border-color:blue;
-    border-left: 7px solid rgba(23, 0, 255, 0.5);
+    border-left: 1px solid rgba(23, 0, 255, 0.5);
 }
 .purple{
     border-color:purple;
-    border-left: 7px solid rgba(128, 0, 128, 0.5);
+    border-left: 1px solid rgba(128, 0, 128, 0.5);
 }
 .button {
   font-family: 'Lato';
