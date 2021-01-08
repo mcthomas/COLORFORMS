@@ -55,7 +55,7 @@ body {
 }
 .framed {
     min-height:95%;
-    border-width:14px;
+    border-width:12px;
     border-style:solid;
     border-color:white;
 }
