@@ -13,7 +13,7 @@
         border: 1px solid white;
         border-style: solid;
         border-radius: 20px;
-        left: 30px;
+        left: 29px;
         top: 30px;
         opacity: 1.0;
         transition: opacity .55s ease-in-out;
@@ -124,7 +124,7 @@ a {
     width: 63px;
     position: relative;
     padding: 8px;
-    right: 1px;
+    right: 2px;
     bottom: -1px;
     transition: opacity .55s ease-in-out;
     -moz-transition: opacity .55s ease-in-out;
