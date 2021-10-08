@@ -3,143 +3,204 @@
 <html>
     
     <head>
-        <title>Matt's Highlights - Feed</title>
+        <title>COLORFORMS</title>
         <link rel="stylesheet" href="style/style.css">
         <link rel="icon" type="image/png" sizes="64x64" href="style/images/favicon.png">
         <meta charset="UTF-8">
-        <meta name="description" content="A personal content feed.">
-        <meta name="keywords" content="Matt, Thomas, music, pilot, drone, animation, game, developer">
+        <meta name="description" content="">
+        <meta name="keywords" content="video, graphics, creative coding, games, apps, music">
         <meta name="author" content="Matt Thomas">
-        <script src="js/percentage.js"></script>
+        <script src="js/effects.js"></script>
     </head>
     
-    <body class="framed">
+    <body class="framed" onload="randSketch()">
         
-    <a href="https://mcthomas.github.io/blog"><div id="microblog">Mind Nodes</div></a>
     <div id="percentage"></div>
+            
+    <div id="color-logo" class="flex-item">
+      <div id="title">
+        <p>
+          c o l o r
+        </p>
+      </div>
+        <img src="style/images/COLOURFORMS.png">
+      <div id="title">
+        <p>
+          f o r m s
+        </p>
+      </div>
+     </div>
         
-    <div id="vCard"><a href="style/files/vCard.vcf" download="Matt Thomas.vcf"> <img src="style/images/vCard.png" width="60"></a></div>
-            
-    <br>
-            
-    <div id="portrait"><img src="style/images/portrait.png"></div>
-    
-    <div id="line"><hr></div>
-    
-    <br>
-    <br>
     <br>
     
-    <div id="feed" class="fade-in">
-		
-		<div class="red feedItem">
+    <div id="color-buttons" class="flex-buttons">
+      <img id="rButton" title="VIDEO" onclick="select('rButton')" onmouseover="rButton('style/images/buttons/rButton-hover.png')" onmouseout="rButton('style/images/buttons/rButton.png')" src="style/images/buttons/rButton.png">
+      <img id="yButton" title="GRAPHIC" onclick="select('yButton')" onmouseover="yButton('style/images/buttons/yButton-hover.png')" onmouseout="yButton('style/images/buttons/yButton.png')" src="style/images/buttons/yButton.png">
+      <img id="gButton" title="APP" onclick="select('gButton')" onmouseover="gButton('style/images/buttons/gButton-hover.png')" onmouseout="gButton('style/images/buttons/gButton.png')" src="style/images/buttons/gButton.png">
+      <img id="bButton" title="MUSIC" onclick="select('bButton')" onmouseover="bButton('style/images/buttons/bButton-hover.png')" onmouseout="bButton('style/images/buttons/bButton.png')" src="style/images/buttons/bButton.png">
+    </div>
+    
+    <br>
+    
+    <div class="serv">
+    
+    <div class="container">
+          
 
-			<a href="https://github.com/mcthomas/Processing-Sketches"><img src="https://gh-card.dev/repos/mcthomas/Processing-Sketches.svg" style="margin:auto;
-			text-align:center; border: 0; width:auto; height: 123px;background:rgba(234, 236, 239, 1.000);"></a>
-			<br>
-			<a href="https://github.com/mcthomas/Processing-Sketches">
-			<img src="style/gifs/processing.gif" alt="animations" width="700">
-			</a>
-			
-		</div>
-        
-    <div class="purple feedItem">
-        
-        <iframe src="https://player.vimeo.com/video/497338928" style="background:black" width="705" height="397" frameborder="0" allow="autoplay; fullscreen" allowfullscreen><a href="https://player.vimeo.com/video/317905708">3D Models Showcase | Rhino</a></iframe>
-        
+      <a href="https://github.com/mcthomas/Processing-Sketches">
+      <img id="proc-sketches" class="graphic" src="style/images/content/placeholder.png" alt="Processing-Sketches" width="350" height="197.20">
+      </a>
+      
+      <p>
+        Static Processing Sketches
+      </p>  
+      
+    </div>
+    
+
+    <div class="container">
+  
+          <iframe class="video" src="https://player.vimeo.com/video/497338928" style="background:black" width="350" height="197.20" frameborder="0" allow="autoplay; fullscreen" allowfullscreen><a href="https://player.vimeo.com/video/317905708">3D Models Showcase | Rhino</a></iframe>
+          <p>
+          buttholes
+          </p>
     </div>
         
-    <div class="blue feedItem">
-        
-        &emsp;<a href="https://mcthomas.github.io/mondrian"><button class="button buttonHover"type="button">Mondrian Composer</button></a>&emsp;
-        <a href="https://mcthomas.github.io/train"><button class="button buttonHover" type="button">Steam Train</button></a>&emsp;
-        <a href="https://mcthomas.github.io/flight"><button class="button buttonHover" type="button">Flight Paths</button></a>&emsp;
-        <a href="https://mcthomas.github.io/arwing"><button class="button buttonHover" type="button">Arwing Model</button></a>&emsp;
-        <br>
-        <br>
-        <a href="https://github.com/mcthomas/mcthomas.github.io">
-        <img src="style/gifs/animations.gif" alt="animations" width="700">
+    <div class="container">
+
+        <a href="https://colorforms.works/arwing">
+        <img class="graphic" src="style/images/content/arwing.png" alt="graphics" width="350" height="197.20">
         </a>
+        <p>
+        3D Arwing Model
+        </p>
 
     </div>
-        
-    <div class="green feedItem">
 
-        <a href="https://github.com/mcthomas/Plotter-GLSL-Shader"><img src="https://gh-card.dev/repos/mcthomas/Plotter-GLSL-Shader.svg" style="margin:auto;
-        text-align:center; border: 0; width:auto; height: 123px;background:rgba(234, 236, 239, 1.000);"></a>
-        <br>
-        <video controls="controls" width="700"
+          <div class="container">
+
+         <a href="https://colorforms.works/mondrian">
+        <img class="graphic" src="style/images/content/mondrian.png" alt="graphics" width="350" height="197.20">
+          </a>
+          <p>
+            De Stijl Generator
+          </p>
+
+      </div>
+
+                  <div class="container">
+
+            <a href="https://colorforms.works/train">
+            <img class="graphic" src="style/images/content/train.png" alt="graphics" width="350" height="197.20">
+            </a>
+            <p>
+              Steam Train Animation
+            </p>
+
+        </div>
+
+                    <div class="container">
+
+            <a href="https://colorforms.works/flight">
+            <img class="graphic" src="style/images/content/flight.png" alt="graphics" width="350" height="197.20">
+              </a>
+              <p>
+                3D Flight Path Model
+              </p>
+
+          </div>
+
+    <div class="container">
+
+        <video class="video" controls="controls" width="350"
                name="Video Name" src="style/videos/shaders.mp4"></video>
         
+               
+               <p>
+               buttholes oops
+               </p>
+
+        
     </div>
         
-    <div class="yellow feedItem">
-    
-        <a href="https://github.com/mcthomas/trace"><img src="https://gh-card.dev/repos/mcthomas/trace.svg" style="margin:auto;
-        text-align:center; border: 0; width:auto; height: 123px;background:rgba(234, 236, 239, 1.000);"></a>
-        <br>
-        <a href="https://github.com/mcthomas/TRACE"><img src="style/images/trace.png" width="700"> </a>
-    
+    <div class="container">
+      
+        <a class="app" href="https://github.com/mcthomas/TRACE"><img src="style/images/content/trace.png" width="350" height="198.2"> </a>
+        
+        <p>
+        buttholes
+        </p>
+
     </div>
 
-    <div class="orange feedItem">
-        
-    <iframe width="705" height="397" src="https://www.youtube-nocookie.com/embed/_4mxE_LArz0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://www.youtube-nocookie.com/embed/_4mxE_LArz0">Flight from Racine to Ephraim, WI | GoPro Highlights</a></iframe>
-    
-    </div>
-    
-    <div class="red feedItem">
-    
-    <a href="https://github.com/mcthomas/beatswitch"><img src="https://gh-card.dev/repos/mcthomas/beatswitch.svg" style="margin:auto;
-    text-align:center; border: 0; width:auto; height: 123px;background:rgba(234, 236, 239, 1.000);"></a>
-    <br>
-        <video controls="controls" width="700"
+    <div class="container">
+
+        <video class="app" controls="controls" width="350"
                name="Video Name" src="style/videos/beatswitch.mp4"></video>
+               
+               <p>
+               buttholes hahahahahaha
+               </p>
+               
         </div>
-    
-    </div>
-    
-    <div class="purple feedItem">
-        <iframe width="705" height="397" src="https://www.youtube-nocookie.com/embed/75o9SMQyJ0M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://www.youtube-nocookie.com/embed/75o9SMQyJ0M">Eric Johnson // Cliffs of Dover // Cover by Matt</a></iframe>
-    </div>
-    
-    <div class="blue feedItem">
-        <iframe src="https://player.vimeo.com/video/317905708" width="705" height="397" frameborder="0" allow="autoplay; fullscreen" allowfullscreen><a href="https://player.vimeo.com/video/317905708">3D Mondrian Animation</a></iframe>
-    </div>
-    
-    <div class="green feedItem">
-        <iframe width="705" height="397" src="https://www.youtube-nocookie.com/embed/ALRqK1nvcRE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://www.youtube-nocookie.com/embed/ALRqK1nvcRE">Flying Over Door County, WI | Drone Compilation</a></iframe>
-    </div>
-    
-    <div class="yellow feedItem">
-        <iframe style="border: 0; width:708px; height: 123px;" src="https://bandcamp.com/EmbeddedPlayer/album=815561479/size=large/bgcol=333333/linkcol=4ec5ec/tracklist=false/artwork=small/transparent=true/" alt="Flux EP" seamless><a href="http://mthomas.bandcamp.com/album/flux-ep">FLUX - EP by Matt Thomas</a></iframe>
-    </div>
-    
-    <div class="orange feedItem">
-        <iframe src="https://player.vimeo.com/video/358572132" width="705" height="397" frameborder="0" allow="autoplay; fullscreen" allowfullscreen><a href="https://player.vimeo.com/video/358572132">Green Screen Pseudo-Animation</a></iframe>
-    </div>
-    
-    <div class="red feedItem">
-        <iframe width="705" height="397" src="https://www.youtube-nocookie.com/embed/h5Fw3W-3anM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://www.youtube-nocookie.com/embed/h5Fw3W-3anM">Malone Park Fireworks | Drone Footage</a></iframe>
-    </div>
-    
+        
+
+
+    <div class="container">
+
+        <iframe class="video" src="https://player.vimeo.com/video/317905708" width="350" height="197.20" frameborder="0" allow="autoplay; fullscreen" allowfullscreen><a href="https://player.vimeo.com/video/317905708">3D Mondrian Concept</a></iframe>
+        
+        <p>
+            3D Mondrian Concept
+        </p>
+        
     </div>
 
-    <div id="iconsLarge">
-        <a href="http://mthomas.bandcamp.com"alt="Bandcamp"><img src="style/images/bandcamp.png"></a>
-        <a href="https://vimeo.com/mcthomas" alt="Vimeo"><img src="style/images/vimeo.png"></a>
-        <a href="https://www.youtube.com/channel/UC0aa2haP-B6CEopfZM43vZQ"alt="Youtube"><img src="style/images/youtube.png"></a>
-        <a href="https://key-software.itch.io"alt="itch.io"><img src="style/images/itch.png"></a>
-        <a href="https://github.com/mcthomas" alt="Github"><img src="style/images/github.png"></a>
+    <div class="container">
+
+        <iframe class="music" style="border: 0; width: 350px; height: 198.2px;" src="https://bandcamp.com/EmbeddedPlayer/album=815561479/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless><a href="https://mthomas.bandcamp.com/album/flux-ep">FLUX - EP by Matt Thomas</a></iframe>
+        
+        <p>
+        FLUX - EP
+        </p>
+    </div>
+
+    <div class="container video">
+
+        <a href="https://colorforms.works/logan"> <img class="app" src="style/images/content/logan.png" width="350" height="197.20"></a>
+        
+        <p>
+            Green Screen Pseudo-Animation
+        </p>
+        
     </div>
     
-    <div id="iconsSmall">
-        <a href="https://www.instagram.com/matt.c.thomas/"alt="Instagram"><img src="style/images/instagram.png"</a>
-        <a href="https://www.linkedin.com/in/matt-thomas-dev"alt="LinkedIn"><img src="style/images/linkedin.png"</a>
+    <div>
+      <p>
+      </p>
+        <iframe width="350" height="197.20" frameborder="0"></iframe>
     </div>
     
-    <div id="resume"><a href="style/files/resume.pdf" download="Resume"> <img src="style/images/resume.png" width="60"></a></div>
-    <div id="letter"><a href="style/files/letter.pdf" download="letter"> 
+    <div>
+      <p>
+      </p>
+        <iframe width="350" height="197.20" frameborder="0"></iframe>
+    </div>
+   
+         <div>
+      <p>
+        </p>
+        <iframe width="350" height="197.20" frameborder="0"></iframe>
+      </div>
+    
+  </div>
+
+
+  
+    <div id="reset"><img title="ALL" onclick="reset()" src="style/images/buttons/reset.png">
+    </div>
+    <div id="vCard"><a href="style/files/vCard.vcf" download="Matt Thomas.vcf"> <img src="style/images/buttons/vCard.png" width="60"></a></div>
+          <a href="https://mcthomas.github.io/blog"><div id="microblog">Mind Nodes</div></a>
             
     </body>
             
