@@ -9,26 +9,31 @@ window.onscroll = function(){
     else if(scrollRatio < 36)
 	   {
 			window.document.getElementById("percentage").innerHTML = "2021";
+                   window.document.getElementById("percentage").style.opacity = 1;
 	   }
        else if(scrollRatio < 52)
        {
             window.document.getElementById("percentage").innerHTML = "2020";
+                               window.document.getElementById("percentage").style.opacity = 1;
        }
        else if(scrollRatio < 68)
        {
             window.document.getElementById("percentage").innerHTML = "2019";
+                               window.document.getElementById("percentage").style.opacity = 1;
        }
        else if(scrollRatio < 84)
        {
             window.document.getElementById("percentage").innerHTML = "2018";
+                               window.document.getElementById("percentage").style.opacity = 1;
        }
        else
        {
             window.document.getElementById("percentage").innerHTML = "2016";
+                               window.document.getElementById("percentage").style.opacity = 1;
        }
 }
 
-var selected = null;
+var selected = "reset";
 var grayscaleOn = `-webkit-filter: grayscale(100%);
    -moz-filter: grayscale(100%);
    -ms-filter: grayscale(100%);
@@ -45,22 +50,6 @@ function randSketch() {
         document.getElementById('proc-sketches').src = "style/images/proc-sketches/" + sketches[Math.floor(Math.random() * 20)] + ".png";
 }
 
-function reset() {
-    selected = null;
-        document.getElementById('rButton').src = "style/images/buttons/rButton.png";
-        document.getElementById('yButton').src = "style/images/buttons/yButton.png";
-        document.getElementById('gButton').src = "style/images/buttons/gButton.png";
-        document.getElementById('bButton').src = "style/images/buttons/bButton.png";
-        var video = document.getElementsByClassName("video");
-        for(let i = 0; i < video.length; i++) { video[i].style.cssText = grayscaleOff; }
-        var graphic = document.getElementsByClassName("graphic");
-        for(let i = 0; i < graphic.length; i++) { graphic[i].style.cssText = grayscaleOff; }
-        var app = document.getElementsByClassName("app");
-        for(let i = 0; i < app.length; i++) { app[i].style.cssText = grayscaleOff; }
-        var music = document.getElementsByClassName("music");
-        for(let i = 0; i < music.length; i++) { music[i].style.cssText = grayscaleOff; }
-}
-
 function select(color) {
     selected = color;
     if(selected == "rButton") {
@@ -68,6 +57,7 @@ function select(color) {
         document.getElementById('yButton').src = "style/images/buttons/yButton.png";
         document.getElementById('gButton').src = "style/images/buttons/gButton.png";
         document.getElementById('bButton').src = "style/images/buttons/bButton.png";
+              document.getElementById('reset').src = "style/images/buttons/reset.png";
         var video = document.getElementsByClassName("video");
         for(let i = 0; i < video.length; i++) { video[i].style.cssText = grayscaleOff; }
         var graphic = document.getElementsByClassName("graphic");
@@ -82,6 +72,7 @@ function select(color) {
             document.getElementById('rButton').src = "style/images/buttons/rButton.png";
             document.getElementById('gButton').src = "style/images/buttons/gButton.png";
             document.getElementById('bButton').src = "style/images/buttons/bButton.png";
+                  document.getElementById('reset').src = "style/images/buttons/reset.png";
             var video = document.getElementsByClassName("video");
             for(let i = 0; i < video.length; i++) { video[i].style.cssText = grayscaleOn; }
             var graphic = document.getElementsByClassName("graphic");
@@ -96,6 +87,7 @@ function select(color) {
             document.getElementById('yButton').src = "style/images/buttons/yButton.png";
             document.getElementById('rButton').src = "style/images/buttons/rButton.png";
             document.getElementById('bButton').src = "style/images/buttons/bButton.png";
+                  document.getElementById('reset').src = "style/images/buttons/reset.png";
             var video = document.getElementsByClassName("video");
             for(let i = 0; i < video.length; i++) { video[i].style.cssText = grayscaleOn; }
             var graphic = document.getElementsByClassName("graphic");
@@ -110,6 +102,7 @@ function select(color) {
       document.getElementById('yButton').src = "style/images/buttons/yButton.png";
       document.getElementById('rButton').src = "style/images/buttons/rButton.png";
       document.getElementById('gButton').src = "style/images/buttons/gButton.png";  
+      document.getElementById('reset').src = "style/images/buttons/reset.png";
       var video = document.getElementsByClassName("video");
         for(let i = 0; i < video.length; i++) { video[i].style.cssText = grayscaleOn; }
         var graphic = document.getElementsByClassName("graphic");
@@ -120,7 +113,13 @@ function select(color) {
         for(let i = 0; i < music.length; i++) { music[i].style.cssText = grayscaleOff; }
     }
     else {
-              var video = document.getElementsByClassName("video");
+        
+        document.getElementById('rButton').src = "style/images/buttons/rButton.png";
+        document.getElementById('yButton').src = "style/images/buttons/yButton.png";
+        document.getElementById('gButton').src = "style/images/buttons/gButton.png";
+        document.getElementById('bButton').src = "style/images/buttons/bButton.png";
+        document.getElementById('reset').src = "style/images/buttons/reset-selected.png";
+        var video = document.getElementsByClassName("video");
         for(let i = 0; i < video.length; i++) { video[i].style.cssText = grayscaleOff; }
         var graphic = document.getElementsByClassName("graphic");
         for(let i = 0; i < graphic.length; i++) { graphic[i].style.cssText = grayscaleOff; }
@@ -131,10 +130,26 @@ function select(color) {
     }
 }
 
-function chbg(color) {
-    document.getElementById("myImg").style.filter = color;
-}   
 //onmouseover="chbg('grayscale(100%)')" onmouseout="chbg('grayscale(0%)')"
+
+function reset(option) {
+    if(selected != "reset") {
+    document.getElementById('reset').src = option;
+  }
+    if(option != "style/images/buttons/reset.png") {
+                      var video = document.getElementsByClassName("video");
+        for(let i = 0; i < video.length; i++) { video[i].style.cssText = grayscaleOff; }
+        var graphic = document.getElementsByClassName("graphic");
+        for(let i = 0; i < graphic.length; i++) { graphic[i].style.cssText = grayscaleOff; }
+        var app = document.getElementsByClassName("app");
+        for(let i = 0; i < app.length; i++) { app[i].style.cssText = grayscaleOff; }
+        var music = document.getElementsByClassName("music");
+        for(let i = 0; i < music.length; i++) { music[i].style.cssText = grayscaleOff; }
+    }
+    else {
+        select(selected);
+    }
+}
 
 function rButton(option) {
     if(selected != "rButton") {

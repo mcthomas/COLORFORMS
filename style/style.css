@@ -14,8 +14,6 @@
         padding: 8px;
         background-color: #e2e2e2;
         color: #555555;
-        border: 1px solid white;
-        border-style: solid;
         border-radius: 10px;
           position: relative;
   text-align: center;
@@ -41,7 +39,8 @@ right: 17px;
     border-style: solid;
     border-radius: 10px;
     right: 30px;
-    top: 30px;
+    top: 14.5px;
+    opacity: 0;
 }
 
 #resume {
@@ -79,9 +78,17 @@ a {
   justify-content: center;
   row-gap: 29.5px;
   column-gap: 83px;
-  margin-right: 44px;
-  margin-left: 44px;
+  margin-right: 87px;
+  margin-left: 87px;
   flex: 2 0 21%;
+}
+.container img {
+            border-radius: 10px;
+}
+.container {
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
 }
 .serv .container {
   justify-content: space-between; 
@@ -151,16 +158,22 @@ a {
   -webkit-transition: opacity .25s ease-in-out;
 }
 .buttonHover:hover {
-  opacity: .5;
+  opacity: .75;
       transition: opacity .25s ease-in-out;
       -moz-transition: opacity .25s ease-in-out;
       -webkit-transition: opacity .25s ease-in-out;
 }
-#reset img {
+.container:hover {
+  opacity: .75;
+      transition: opacity .25s ease-in-out;
+      -moz-transition: opacity .25s ease-in-out;
+      -webkit-transition: opacity .25s ease-in-out;
+}
+.reset img {
   max-width: 20px;
   position: relative;
-  bottom: -45.5px;
-  margin-top: 200px;
+  bottom: -46px;
+  margin-top: 0px;
   transition: opacity .55s ease-in-out;
   display: block;
 margin-left: auto;
@@ -191,25 +204,25 @@ bottom: 4px;
   -webkit-transition: opacity .55s ease-in-out;
 }
 #iconsSmall img:hover {
-    opacity: .5;
+    opacity: .75;
         transition: opacity .55s ease-in-out;
         -moz-transition: opacity .55s ease-in-out;
         -webkit-transition: opacity .55s ease-in-out;
 }
 #microblog:hover {
-    opacity: .5;
+    opacity: .75;
         transition: opacity .25s ease-in-out;
         -moz-transition: opacity .25s ease-in-out;
         -webkit-transition: opacity .25s ease-in-out;
 }
 #vCard img:hover {
-    opacity: .5;
+    opacity: .75;
         transition: opacity .25s ease-in-out;
         -moz-transition: opacity .25s ease-in-out;
         -webkit-transition: opacity .25s ease-in-out;
 }
 #resume img:hover {
-    opacity: .5;
+    opacity: .75;
         transition: opacity .55s ease-in-out;
         -moz-transition: opacity .55s ease-in-out;
         -webkit-transition: opacity .55s ease-in-out;
