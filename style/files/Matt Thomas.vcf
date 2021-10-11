@@ -1,13 +1,11 @@
 BEGIN:VCARD
 VERSION:3.0
-PRODID:-//Apple Inc.//macOS 11.6//EN
 N:Thomas;Matt;;;
 FN:Matt Thomas
 ORG:Extreme Engineering Solutions;
 TITLE:Software Developer
 item1.EMAIL;type=INTERNET;type=pref:matt.thomas2@icloud.com
 item1.X-ABLabel:email
-TEL;type=IPHONE;type=CELL;type=VOICE;type=pref:12622716509
 ADR;type=HOME;type=pref:;;;Middleton\,;WI;;
 item2.URL;type=pref:https://colorforms.works
 item2.X-ABLabel:LinkedIn
