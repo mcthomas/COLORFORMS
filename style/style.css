@@ -13,7 +13,7 @@
   font-family: "HelveticaThin";
   padding: 8px;
   background-color: #e2e2e2;
-  color: #333333;
+  color: #000000;
   border-radius: 10px;
   position: relative;
   margin: auto;
@@ -32,7 +32,7 @@
   font-family: "HelveticaThin";
   padding: 8px;
   background-color: #e2e2e2;
-  color: #333333;
+  color: #000000;
   border-radius: 10px;
   right: 30px;
   top: 14.5px;
@@ -40,7 +40,7 @@
 }
 #title {
   text-transform: uppercase;
-  color: #333333;
+  color: #000000;
   font-size: 30px;
   font-family: "HelveticaUltraLight";
 }
@@ -85,7 +85,7 @@ a {
 .serv p {
   font-size: 20px;
   font-family: "HelveticaThin";
-  color: #333333;
+  color: #000000;
   margin-top: 5px;
 }
 /*begin:elements*/
