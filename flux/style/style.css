@@ -1,18 +1,18 @@
 body {
-    margin: auto;
-    background: #cccccc;
+  margin: auto;
+  background: #cccccc;
 }
 .framed {
-    min-height:95%;
-    border-width:14.5px;
-    border-style:solid;
-    border-color:#e2e2e2;
-    border-radius: 25px;
+  min-height: 95%;
+  border-width: 14.5px;
+  border-style: solid;
+  border-color: #e2e2e2;
+  border-radius: 25px;
 }
 
 #content {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
 }
