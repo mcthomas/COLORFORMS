@@ -5,7 +5,6 @@ window.onscroll = function () {
         document.body.parentNode.clientHeight)) *
     100;
   if (scrollRatio < 25) {
-    console.log("in header, fadeRatio: " + scrollRatio);
     window.document.getElementById("percentage").style.opacity =
       (scrollRatio / 100) * 4;
     window.document.getElementById("percentage").innerHTML = "2021";
