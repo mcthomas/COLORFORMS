@@ -1,205 +1,256 @@
 <!DOCTYPE html>
 
 <html>
-    
-    <head>
-        <title>COLORFORMS</title>
-        <link rel="stylesheet" href="style/style.css">
-        <link rel="icon" type="image/png" sizes="64x64" href="style/images/favicon.png">
-        <meta charset="UTF-8">
-        <meta name="description" content="">
-        <meta name="keywords" content="video, graphics, creative coding, games, apps, music">
-        <meta name="author" content="Matt Thomas">
-        <script src="js/effects.js"></script>
-    </head>
-    
-    <body class="framed" onload="randSketch()">
-        
+  <head>
+    <title>COLORFORMS</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="style/images/favicon.png"
+    />
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="video, graphics, creative coding, games, apps, music"
+    />
+    <meta name="author" content="Matt Thomas" />
+    <script src="js/effects.js"></script>
+  </head>
+
+  <body class="framed" onload="randSketch()">
     <div id="percentage"></div>
-            
-    <div id="color-logo" class="flex-item">
+
+    <div id="color-logo" class="title-serv">
       <div id="title">
-        <p>
-          c o l o r
-        </p>
+        <p>c o l o r</p>
       </div>
-        <img src="style/images/COLOURFORMS.png">
+      <img src="style/images/COLOURFORMS.png" />
       <div id="title">
-        <p>
-          f o r m s
-        </p>
+        <p>f o r m s</p>
       </div>
-     </div>
-        
-    <br>
-    
-    <div id="color-buttons" class="flex-buttons">
-      <img id="rButton" title="VIDEO" onclick="select('rButton')" onmouseover="rButton('style/images/buttons/rButton-hover.png')" onmouseout="rButton('style/images/buttons/rButton.png')" src="style/images/buttons/rButton.png">
-      <img id="yButton" title="GRAPHIC" onclick="select('yButton')" onmouseover="yButton('style/images/buttons/yButton-hover.png')" onmouseout="yButton('style/images/buttons/yButton.png')" src="style/images/buttons/yButton.png">
-      <img id="gButton" title="APP" onclick="select('gButton')" onmouseover="gButton('style/images/buttons/gButton-hover.png')" onmouseout="gButton('style/images/buttons/gButton.png')" src="style/images/buttons/gButton.png">
-      <img id="bButton" title="MUSIC" onclick="select('bButton')" onmouseover="bButton('style/images/buttons/bButton-hover.png')" onmouseout="bButton('style/images/buttons/bButton.png')" src="style/images/buttons/bButton.png">
     </div>
-    
-    <br>
-    
+
+    <br />
+
+    <div id="color-buttons" class="serv-buttons">
+      <img
+        id="rButton"
+        title="VIDEO"
+        onclick="select('rButton')"
+        onmouseover="rButton('style/images/buttons/rButton-hover.png')"
+        onmouseout="rButton('style/images/buttons/rButton.png')"
+        src="style/images/buttons/rButton.png"
+      />
+      <img
+        id="yButton"
+        title="GRAPHIC"
+        onclick="select('yButton')"
+        onmouseover="yButton('style/images/buttons/yButton-hover.png')"
+        onmouseout="yButton('style/images/buttons/yButton.png')"
+        src="style/images/buttons/yButton.png"
+      />
+      <img
+        id="gButton"
+        title="APP"
+        onclick="select('gButton')"
+        onmouseover="gButton('style/images/buttons/gButton-hover.png')"
+        onmouseout="gButton('style/images/buttons/gButton.png')"
+        src="style/images/buttons/gButton.png"
+      />
+      <img
+        id="bButton"
+        title="MUSIC"
+        onclick="select('bButton')"
+        onmouseover="bButton('style/images/buttons/bButton-hover.png')"
+        onmouseout="bButton('style/images/buttons/bButton.png')"
+        src="style/images/buttons/bButton.png"
+      />
+    </div>
+
+    <br />
+
     <div class="serv">
-    
-    <div class="container">
-          
-
-      <a href="https://github.com/mcthomas/Processing-Sketches">
-      <img id="proc-sketches" class="graphic" src="style/images/content/placeholder.png" alt="Processing-Sketches" width="350" height="197.20">
-      </a>
-      
-      <p>
-        Static Processing Sketches
-      </p>  
-      
-    </div>
-    
-
-    <div class="container">
-  
-             <a href="https://colorforms.works/models">
-        <img class="video" src="style/images/content/models.png" alt="video" width="350" height="197.20">
-          </a>      
-    <p>
-           3D Models Showcase
-          </p>
-    </div>
-        
-    <div class="container">
-
-        <a href="https://colorforms.works/arwing">
-        <img class="graphic" src="style/images/content/arwing.png" alt="graphics" width="350" height="197.20">
+      <div class="container">
+        <a href="https://github.com/mcthomas/Processing-Sketches">
+          <img
+            id="proc-sketches"
+            class="graphic"
+            src="style/images/content/placeholder.png"
+            width="350"
+            height="197.20"
+          />
         </a>
-        <p>
-        3D Arwing Model
-        </p>
 
-    </div>
-
-          <div class="container">
-
-         <a href="https://colorforms.works/mondrian-generator">
-        <img class="graphic" src="style/images/content/mondrian-generator.png" alt="graphics" width="350" height="197.20">
-          </a>
-          <p>
-            De Stijl Generator
-          </p>
-
+        <p>Static Processing Sketches</p>
       </div>
 
-                  <div class="container">
+      <div class="container">
+        <a href="https://colorforms.works/models">
+          <img
+            class="video"
+            src="style/images/content/models.png"
+            width="350"
+            height="197.20"
+          />
+        </a>
+        <p>3D Models Showcase</p>
+      </div>
 
-            <a href="https://colorforms.works/train">
-            <img class="graphic" src="style/images/content/train.png" alt="graphics" width="350" height="197.20">
-            </a>
-            <p>
-              Steam Train Animation
-            </p>
+      <div class="container">
+        <a href="https://colorforms.works/arwing">
+          <img
+            class="graphic"
+            src="style/images/content/arwing.png"
+            width="350"
+            height="197.20"
+          />
+        </a>
+        <p>3D Arwing Model</p>
+      </div>
 
-        </div>
+      <div class="container">
+        <a href="https://colorforms.works/mondrian-generator">
+          <img
+            class="graphic"
+            src="style/images/content/mondrian-generator.png"
+            width="350"
+            height="197.20"
+          />
+        </a>
+        <p>De Stijl Generator</p>
+      </div>
 
-                    <div class="container">
+      <div class="container">
+        <a href="https://colorforms.works/train">
+          <img
+            class="graphic"
+            src="style/images/content/train.png"
+            width="350"
+            height="197.20"
+          />
+        </a>
+        <p>Steam Train Animation</p>
+      </div>
 
-            <a href="https://colorforms.works/flight">
-            <img class="graphic" src="style/images/content/flight.png" alt="graphics" width="350" height="197.20">
-              </a>
-              <p>
-                3D Flight Path Model
-              </p>
+      <div class="container">
+        <a href="https://colorforms.works/flight">
+          <img
+            class="graphic"
+            src="style/images/content/flight.png"
+            width="350"
+            height="197.20"
+          />
+        </a>
+        <p>3D Flight Path Model</p>
+      </div>
 
-          </div>
+      <div class="container">
+        <a href="https://tinyurl.com/y8r6c6fe">
+          <img
+            class="graphic"
+            src="style/images/content/shader.png"
+            width="350"
+            height="197.20"
+          />
+        </a>
 
-    <div class="container">
+        <p>GLSL Shader Pair</p>
+      </div>
 
-        <a href="https://tinyurl.com/y8r6c6fe"> <img class="graphic" src="style/images/content/shader.png" width="350" height="197.20"> </a>
-               
-               <p>
-               GLSL Shader Pair
-               </p>
+      <div class="container">
+        <a class="app" href="https://github.com/mcthomas/trace"
+          ><img
+            src="style/images/content/trace.png"
+            width="350"
+            height="198.2"
+          />
+        </a>
 
-        
-    </div>
-        
-    <div class="container">
-      
-        <a class="app" href="https://github.com/mcthomas/trace"><img src="style/images/content/trace.png" width="350" height="198.2"> </a>
-        
-        <p>
-        TRACE iOS App
-        </p>
+        <p>TRACE iOS App</p>
+      </div>
 
-    </div>
+      <div class="container">
+        <a class="app" href="https://github.com/mcthomas/beatswitch"
+          ><img
+            src="style/images/content/beatswitch.png"
+            width="350"
+            height="198.2"
+          />
+        </a>
 
-    <div class="container">
+        <p>BeatSwitch iOS Game</p>
+      </div>
 
-    <a class="app" href="https://github.com/mcthomas/beatswitch"><img src="style/images/content/beatswitch.png"                      width="350" height="198.2"> </a>
-               
-               <p>
-                BeatSwitch iOS Game
-               </p>
-               
-        </div>
-        
+      <div class="container">
+        <a href="https://colorforms.works/mondrian">
+          <img
+            class="video"
+            src="style/images/content/mondrian.png"
+            width="350"
+            height="197.20"
+        /></a>
+        <p>3D Mondrian Concept</p>
+      </div>
 
+      <div class="container">
+        <a href="https://colorforms.works/flux"
+          ><img
+            class="music"
+            width="350"
+            height="197.20"
+            frameborder="0"
+            src="style/images/content/flux.png"
+        /></a>
 
-    <div class="container">
+        <p>FLUX - EP</p>
+      </div>
 
-       <a href="https://colorforms.works/mondrian"> <img class="video" src="style/images/content/mondrian.png"        width="350" height="197.20"></a> 
-        <p>
-            3D Mondrian Concept
-        </p>
-        
-    </div>
+      <div class="container video">
+        <a href="https://colorforms.works/logan">
+          <img
+            class="video"
+            src="style/images/content/logan.png"
+            width="350"
+            height="197.20"
+        /></a>
 
-    <div class="container">
+        <p>Green Screen Pseudo-Animation</p>
+      </div>
 
-        <a href="https://colorforms.works/flux"><img class="music" width="350" height="197.20" frameborder="0" src="style/images/content/flux.png"></a>
-        
-        <p>
-        FLUX - EP
-        </p>
-    </div>
-
-    <div class="container video">
-
-        <a href="https://colorforms.works/logan"> <img class="video" src="style/images/content/logan.png" width="350" height="197.20"></a>
-        
-        <p>
-            Green Screen Pseudo-Animation
-        </p>
-        
-    </div>
-    
-    <div>
-      <p>
-      </p>
-        <iframe width="350" height="197.20" frameborder="0"></iframe>
-    </div>
-    
-    <div>
-      <p>
-      </p>
-        <iframe width="350" height="197.20" frameborder="0"></iframe>
-    </div>
-   
-         <div>
-      <p>
-        </p>
+      <div>
+        <p></p>
         <iframe width="350" height="197.20" frameborder="0"></iframe>
       </div>
-    
-  </div>
 
+      <div>
+        <p></p>
+        <iframe width="350" height="197.20" frameborder="0"></iframe>
+      </div>
 
-  
-    <div class="reset"><img id="reset" title="ALL" onclick="select('reset')" onmouseover="reset('style/images/buttons/reset-hover.png')" onmouseout="reset('style/images/buttons/reset.png')" src="style/images/buttons/reset-selected.png">
+      <div>
+        <p></p>
+        <iframe width="350" height="197.20" frameborder="0"></iframe>
+      </div>
     </div>
-    <div id="vCard"><a href="style/files/vCard.vcf" download="Matt Thomas.vcf"> <img src="style/images/buttons/vCard.png" width="60"></a></div>
-          <a href="https://mcthomas.github.io/blog"><div id="microblog">Mind Nodes</div></a>
-            
-    </body>
-            
+
+    <div class="reset">
+      <img
+        id="reset"
+        title="ALL"
+        onclick="select('reset')"
+        onmouseover="reset('style/images/buttons/reset-hover.png')"
+        onmouseout="reset('style/images/buttons/reset.png')"
+        src="style/images/buttons/reset-selected.png"
+      />
+    </div>
+    <div id="vCard">
+      <a href="style/files/Matt Thomas.vcf" download="Matt Thomas.vcf">
+        <img src="style/images/buttons/vCard.png"
+      /></a>
+    </div>
+    <a href="https://colorforms.works/blog"><div id="blog">Mind Nodes</div></a>
+  </body>
 </html>
