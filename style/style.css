@@ -77,7 +77,7 @@ a {
   flex: 2 0 21%;
 }
 .container img {
-  border-radius: 10px;
+  border-radius: 3px;
 }
 .container {
   justify-content: space-between;
