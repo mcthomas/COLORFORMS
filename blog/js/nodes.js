@@ -35,7 +35,7 @@ input.draw = function() {
   varyNodeColors();
   moveNodes();
   drawNodes();
-  drawConnections();
+  connections();
 };
 var augmentNode = function() {
     var targetNode = nodes[Math.floor(Math.random() * nodes.length)];
@@ -202,8 +202,32 @@ var drawNodes = function() {
     input.circle(nodes[i][1], nodes[i][2], nodes[i][0]);
   }
 }
-var drawConnections = function() {
-  
+var connections = function() {
+    for (var i = 0; i < nodes.length; i++) { 
+        for (var j = 0; j < nodes.length; j++) {
+            var distance = Math.sqrt(Math.pow(nodes[i][1]-nodes[j][1],2)+Math.pow(nodes[i][2]-nodes[j][2],2));
+            if(distance < 75) {
+                if((nodes[i][11][3] < 256) && (nodes[j][11][3] < 256)) {
+                    if(nodes[i][11][3] < nodes[j][11][3]) {
+                        input.stroke(256,256,256,nodes[i][11][3]*(1-(distance/75.0)));
+                    }
+                    else {
+                        input.stroke(256,256,256,nodes[j][11][3]*(1-(distance/75.0)));
+                    }
+                }
+                else if(nodes[i][11][3] < 256) {
+                    input.stroke(256,256,256,nodes[i][11][3]*(1-(distance/75.0)));
+                }
+                else if(nodes[j][11][3] < 256) {
+                    input.stroke(256,256,256,nodes[j][11][3]*(1-(distance/75.0)));
+                }
+                else {
+                    input.stroke(256,256,256,256*(1-(distance/75.0)));      
+                }
+                    input.line(nodes[i][1],nodes[i][2],nodes[j][1],nodes[j][2]);
+            }
+        }
+    }
 }
 };
 var nodesDisplay = new p5(output, 'nodes');
