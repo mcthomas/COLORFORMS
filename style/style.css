@@ -3,17 +3,17 @@
 }
 /*begin:text*/
 @font-face {
-  font-family: "HelveticaNowDisplay-Hairline";
-  src: url("fonts/HelveticaNowVar.ttf") format("truetype");
+  font-family: "Hairline";
+  src: url("fonts/Hairline.ttf") format("truetype");
 }
 @font-face {
-  font-family: "TTInterfaces-Thin";
-  src: url("fonts/TTInterfaces-Thin.ttf") format("truetype");
+  font-family: "Thin";
+  src: url("fonts/Thin.ttf") format("truetype");
 }
 #blog {
   max-width: 100px;
   font-size: 18px;
-  font-family: "TTInterfaces-Thin";
+  font-family: "Thin";
   padding: 8px;
   background-color: #e2e2e2;
   color: #000000;
@@ -32,7 +32,7 @@
 #percentage {
   position: fixed;
   font-size: 18px;
-  font-family: "TTInterfaces-Thin";
+  font-family: "Thin";
   padding: 8px;
   background-color: #e2e2e2;
   color: #000000;
@@ -45,7 +45,7 @@
   text-transform: uppercase;
   color: #000000;
   font-size: 30px;
-  font-family: "HelveticaNowDisplay-Hairline";
+  font-family: "Hairline";
   font-weight: 1;
 }
 /*end:text*/
@@ -88,7 +88,7 @@ a {
 }
 .serv p {
   font-size: 20px;
-  font-family: "TTInterfaces-Thin";
+  font-family: "Thin";
   color: #000000;
   margin-top: 5px;
 }
