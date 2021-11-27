@@ -98,11 +98,11 @@ var createNode = function() {
 var checkCollisions = function() {
   for (var i = 0; i < nodes.length; i++) {
       if(!nodes[i][7] && !nodes[i][8]) {
-      if((nodes[i][1] >= 875) && (nodes[i][3] > 0)) {
+      if((nodes[i][1] >= 850) && (nodes[i][3] > 0)) {
         nodes[i][7] = true;
         nodes[i][5] = nodes[i][3];
       }
-      if((nodes[i][1] <= 25) && (nodes[i][3] < 0)) {
+      if((nodes[i][1] <= 50) && (nodes[i][3] < 0)) {
         nodes[i][8] = true;
         nodes[i][5] = nodes[i][3];
       }
@@ -111,11 +111,11 @@ var checkCollisions = function() {
         oppAccel(i);
       }
       if(!nodes[i][9] && !nodes[i][10]) {
-      if((nodes[i][2] >= 175) && (nodes[i][4] > 0)) {
+      if((nodes[i][2] >= 150) && (nodes[i][4] > 0)) {
         nodes[i][9] = true;
         nodes[i][6] = nodes[i][4];
       }
-      if((nodes[i][2] <= 25) && (nodes[i][4] < 0)) {
+      if((nodes[i][2] <= 50) && (nodes[i][4] < 0)) {
         nodes[i][10] = true;
         nodes[i][6] = nodes[i][4];
       }
@@ -131,7 +131,7 @@ var oppAccel = function(i) {
             nodes[i][7] = false;
         }
         else {
-            nodes[i][3] -= .01;
+            nodes[i][3] -= .05;
         }
     }
     if(nodes[i][8]) {
@@ -139,7 +139,7 @@ var oppAccel = function(i) {
             nodes[i][8] = false;
         }
         else {
-            nodes[i][3] += .01;
+            nodes[i][3] += .05;
         }
     }
     if(nodes[i][9]) {
@@ -147,7 +147,7 @@ var oppAccel = function(i) {
             nodes[i][9] = false;
         }
         else {
-            nodes[i][4] -= .01;
+            nodes[i][4] -= .05;
         }
     }
     if(nodes[i][10]) {
@@ -155,7 +155,7 @@ var oppAccel = function(i) {
             nodes[i][10] = false;
         }
         else {
-            nodes[i][4] += .01;
+            nodes[i][4] += .05;
         }
     }
 }
@@ -224,20 +224,20 @@ var connections = function() {
                 }
                     input.line(nodes[i][1],nodes[i][2],nodes[j][1],nodes[j][2]);
                     if(nodes[i][1] > nodes[j][1]) {
-                        nodes[i][3] -= .005*(1-(distance/100.0));
-                        nodes[j][3] += .005*(1-(distance/100.0));
+                        nodes[i][3] -= .0075*(1-(distance/100.0));
+                        nodes[j][3] += .0075*(1-(distance/100.0));
                     }
                     else if(nodes[i][1] < nodes[j][1]) {
-                        nodes[i][3] += .005*(1-(distance/100.0));
-                        nodes[j][3] -= .005*(1-(distance/100.0));
+                        nodes[i][3] += .0075*(1-(distance/100.0));
+                        nodes[j][3] -= .0075*(1-(distance/100.0));
                     }
                     if(nodes[i][2] > nodes[j][2]) {
-                        nodes[i][4] -= .005*(1-(distance/100.0));
-                        nodes[j][4] += .005*(1-(distance/100.0));
+                        nodes[i][4] -= .0075*(1-(distance/100.0));
+                        nodes[j][4] += .0075*(1-(distance/100.0));
                     }
                     else if(nodes[i][2] < nodes[j][2]) {
-                        nodes[i][4] += .005*(1-(distance/100.0));
-                        nodes[j][4] -= .005*(1-(distance/100.0));
+                        nodes[i][4] += .0075*(1-(distance/100.0));
+                        nodes[j][4] -= .0075*(1-(distance/100.0));
                     }
 
             }
