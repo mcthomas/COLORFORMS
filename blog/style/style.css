@@ -3,50 +3,50 @@
 }
 /*begin:text*/
 @font-face {
-  font-family: "HelveticaNowVarDisplay-Hairline";
-  src: url("../../style/fonts/HelveticaNowVar.ttf") format("truetype");
+  font-family: "Hairline";
+  src: url("../../style/fonts/Hairline.ttf") format("truetype");
 }
 @font-face {
-  font-family: "TTInterfaces-Thin";
-  src: url("../../style/fonts/TTInterfaces-Thin.ttf") format("truetype");
+  font-family: "Thin";
+  src: url("../../style/fonts/Thin.ttf") format("truetype");
 }
 /*begin:layout*/
 #title {
   color: #000000;
   font-size: 37.5px;
   font-weight: 1;
-  font-family: "HelveticaNowVarDisplay-Hairline";
+  font-family: "Hairline";
   margin-top: 100px;
   margin-bottom: 0px;
 }
 body {
   margin: auto;
-  background: #CCCCCC;
+  background: #cccccc;
 }
 .framed {
   min-height: 95%;
   border-width: 14.5px;
   border-style: solid;
-  border-color: #E2E2E2;
+  border-color: #e2e2e2;
   border-radius: 25px;
   text-align: center;
 }
 .entry {
   margin-left: 22.5%;
   margin-right: 22.5%;
-  background: #C5C5C5;
+  background: #c5c5c5;
   border-radius: 3px;
   font-size: 27.5px;
   font-weight: 1;
-  font-family: "HelveticaNowVarDisplay-Hairline";
+  font-family: "Hairline";
 }
 .entry img {
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 600px;
-    border-radius: 3px;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  border-radius: 3px;
 }
 .header {
   padding-top: 23px;
@@ -54,7 +54,7 @@ body {
 .contents {
   font-size: 18px;
   text-align: left;
-  font-family: "TTInterfaces-Thin";
+  font-family: "Thin";
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 23px;
@@ -70,10 +70,11 @@ body {
   margin-top: 200px;
   margin-bottom: 16px;
 }
-#nodes {}
+#nodes {
+}
 #home {
   display: inline-block;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   overflow: hidden;
   border-radius: 200px;
   transition: opacity 0.25s ease-in-out;
@@ -92,33 +93,53 @@ body {
   -webkit-transition: opacity 0.25s ease-in-out;
 }
 .fade-in {
-  animation: fadeIn 5s;
-  -webkit-animation: fadeIn 5s;
-  -moz-animation: fadeIn 5s;
-  -o-animation: fadeIn 5s;
-  -ms-animation: fadeIn 5s;
+  animation: fadeIn 10s;
+  -webkit-animation: fadeIn 10s;
+  -moz-animation: fadeIn 10s;
+  -o-animation: fadeIn 10s;
+  -ms-animation: fadeIn 10s;
 }
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-o-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-ms-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
