@@ -1,7 +1,8 @@
 :root {
   font-variant-ligatures: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-* {-webkit-font-smoothing: antialiased;}
 /*begin:text*/
 @font-face {
   font-family: "Hairline";
