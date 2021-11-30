@@ -211,6 +211,26 @@ var output = function (input) {
   };
   var connections = function () {
     for (var i = 0; i < nodes.length; i++) {
+      var mouseDistance = input.dist(nodes[i][1], nodes[i][2], input.mouseX, input.mouseY);
+        if(mouseDistance < 100) {
+              input.stroke(
+                256,
+                256,
+                256,
+                nodes[i][11][3] * (1 - mouseDistance / 100.0)
+              );
+              input.line(nodes[i][1], nodes[i][2], input.mouseX, input.mouseY);
+          if (nodes[i][1] > input.mouseX) {
+            nodes[i][3] -= 0.01 * (1 - mouseDistance / 100.0);
+          } else if (nodes[i][1] < input.mouseX) {
+            nodes[i][3] += 0.01 * (1 - mouseDistance / 100.0);
+          }
+          if (nodes[i][2] > input.mouseY) {
+            nodes[i][4] -= 0.01 * (1 - mouseDistance / 100.0);
+          } else if (nodes[i][2] < input.mouseY) {
+            nodes[i][4] += 0.01 * (1 - mouseDistance / 100.0);
+          }
+        }
       for (var j = 0; j < nodes.length; j++) {
         var distance = Math.sqrt(
           Math.pow(nodes[i][1] - nodes[j][1], 2) +
@@ -262,7 +282,7 @@ var output = function (input) {
             nodes[i][4] -= 0.001 * (1 - distance / 100.0) * (nodes[j][0] / 15);
             nodes[j][4] += 0.001 * (1 - distance / 100.0) * (nodes[i][0] / 15);
           } else if (nodes[i][2] < nodes[j][2]) {
-            nodes[i][4] += 0.0005 * (1 - distance / 100.0) * (nodes[j][0] / 15);
+            nodes[i][4] += 0.001 * (1 - distance / 100.0) * (nodes[j][0] / 15);
             nodes[j][4] -= 0.001 * (1 - distance / 100.0) * (nodes[i][0] / 15);
           }
         }
