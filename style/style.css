@@ -7,6 +7,7 @@
 @font-face {
   font-family: "Hairline";
   src: url("fonts/Hairline.ttf") format("truetype");
+  font-weight: 90;
 }
 @font-face {
   font-family: "Thin";
