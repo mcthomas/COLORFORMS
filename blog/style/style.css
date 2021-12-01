@@ -34,8 +34,8 @@ body {
   text-align: center;
 }
 .entry {
-  margin-left: 413px;
-  margin-right: 413px;
+  width: 830px;
+  margin: auto;
   margin-top: 48px;
   background: #c5c5c5;
   border-radius: 5px;
