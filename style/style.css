@@ -5,7 +5,7 @@
 @font-face {
   font-family: "Hairline";
   src: url("fonts/Hairline.ttf") format("truetype");
-  font-weight: 65;
+  font-weight: 66;
 }
 @font-face {
   font-family: "Thin";
@@ -47,6 +47,7 @@
   color: #000000;
   font-size: 30px;
   font-family: "Hairline";
+  letter-spacing: 8px;
 }
 /*end:text*/
 
@@ -88,6 +89,7 @@ a {
 }
 .serv p {
   font-size: 20px;
+  word-spacing: .5px;
   font-family: "Thin";
   color: #000000;
   margin-top: 5px;
@@ -158,7 +160,15 @@ a {
   -webkit-transition: opacity 0.25s ease-in-out;
 }
 #color-logo {
-  margin-bottom: 2.5px;
+  margin-top: 27px;
+}
+#color-logo p {
+  margin: 57px;
+  margin-top: 20px;
+}
+#color-logo img {
+  max-width: 220px;
+  margin-bottom: 106px;
 }
 #color-buttons img {
   margin-bottom: 104px;
