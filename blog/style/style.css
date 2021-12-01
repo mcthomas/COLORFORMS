@@ -14,7 +14,7 @@
 /*begin:layout*/
 #title {
   color: #000000;
-  font-size: 40px;
+  font-size: 2.5vw;
   font-family: "Hairline";
   margin-top: 100px;
   margin-bottom: 0px;
@@ -39,10 +39,11 @@ body {
   margin-top: 48px;
   background: #c5c5c5;
   border-radius: 5px;
+  padding-top: 20px;
 }
 .entry a {
   color: #000000;
-  font-size: 34px;
+  font-size: 2vw;
   letter-spacing: 1.5px;
   word-spacing: -1px;
   font-family: "Hairline";
@@ -60,14 +61,14 @@ body {
   padding-top: 23px;
 }
 .contents {
-  font-size: 20px;
+  font-size: 1.25vw;
   text-align: left;
   font-family: "Thin";
   letter-spacing: 0px;
   word-spacing: .5px;
   padding-left: 30px;
   padding-right: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 22px;
   text-indent: 50px;
   line-height: 1.75;
 }
