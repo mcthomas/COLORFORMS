@@ -36,6 +36,7 @@ body {
 .entry {
   margin-left: 25%;
   margin-right: 25%;
+  margin-top: 48px;
   background: #c5c5c5;
   border-radius: 5px;
   font-size: 29px;
