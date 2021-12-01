@@ -14,7 +14,7 @@
 /*begin:layout*/
 #title {
   color: #000000;
-  font-size: 38px;
+  font-size: 40px;
   font-family: "Hairline";
   margin-top: 100px;
   margin-bottom: 0px;
@@ -39,10 +39,14 @@ body {
   margin-top: 48px;
   background: #c5c5c5;
   border-radius: 5px;
-  font-size: 29px;
-  letter-spacing: 2px;
+}
+.entry a {
+  color: #000000;
+  font-size: 34px;
+  letter-spacing: 1.5px;
   word-spacing: -1px;
   font-family: "Hairline";
+  text-decoration: none;
 }
 .entry img {
   position: relative;
