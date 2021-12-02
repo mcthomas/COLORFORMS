@@ -1,5 +1,7 @@
 :root {
   font-variant-ligatures: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
 }
 /*begin:text*/
 @font-face {

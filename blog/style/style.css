@@ -1,5 +1,6 @@
 :root {
   font-variant-ligatures: none;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 /*begin:text*/
 @font-face {
@@ -61,7 +62,7 @@ body {
   padding-top: 23px;
 }
 .contents {
-  font-size: 19px;
+  font-size: 20px;
   text-align: left;
   font-family: "Thin";
   letter-spacing: 0px;
