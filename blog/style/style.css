@@ -14,7 +14,7 @@
 /*begin:layout*/
 #title {
   color: #000000;
-  font-size: 2.5vw;
+  font-size: 46px;
   font-family: "Hairline";
   margin-top: 100px;
   margin-bottom: 0px;
@@ -43,7 +43,7 @@ body {
 }
 .entry a {
   color: #000000;
-  font-size: 2vw;
+  font-size: 38px;
   letter-spacing: 1.5px;
   word-spacing: -1px;
   font-family: "Hairline";
@@ -61,7 +61,7 @@ body {
   padding-top: 23px;
 }
 .contents {
-  font-size: 1.25vw;
+  font-size: 19px;
   text-align: left;
   font-family: "Thin";
   letter-spacing: 0px;
