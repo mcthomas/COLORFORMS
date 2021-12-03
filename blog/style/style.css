@@ -14,7 +14,16 @@
 }
 /*begin:layout*/
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #title {
+  color: #000000;
+  font-family: "Hairline";
+  margin-top: 100px;
+  margin-bottom: 0px;
+  letter-spacing: 8px;
+  word-spacing: -4px;
+  /* Smartphones (portrait and landscape) ----------- */
     font-size: 10em;
+    }
 }
 #title {
   color: #000000;
@@ -47,7 +56,14 @@ body {
   padding-top: 20px;
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .entry a {
+  color: #000000;
+  letter-spacing: 2px;
+  word-spacing: -1px;
+  font-family: "Hairline";
+  text-decoration: none;
     font-size: 8em;
+    }
 }
 .entry a {
   color: #000000;
