@@ -9,6 +9,11 @@
     #title {
     font-size: 2.875em;
     }
+    #home img {
+        max-width: 20px;
+        padding: 5px;
+        padding-bottom: 3px;
+    }
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .entry a {
@@ -16,6 +21,11 @@
     }
     #title {
     font-size: 4em;
+    }
+    #home img {
+        max-width: 40px;
+        padding: 10px;
+        padding-bottom: 6px;
     }
 }
 /*begin:text*/
@@ -107,11 +117,6 @@ body {
   transition: opacity 0.25s ease-in-out;
   -moz-transition: opacity 0.25s ease-in-out;
   -webkit-transition: opacity 0.25s ease-in-out;
-}
-#home img {
-  max-width: 20px;
-  padding: 5px;
-  padding-bottom: 3px;
 }
 #footer :hover {
   opacity: 0.75;
