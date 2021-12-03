@@ -23,7 +23,7 @@
   word-spacing: -4px;
   /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    font-size: 5em;
+    font-size: 10em;
 }
 }
 body {
@@ -54,7 +54,7 @@ body {
   font-family: "Hairline";
   text-decoration: none;
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    font-size: 4em;
+    font-size: 8em;
 }
   
 }
