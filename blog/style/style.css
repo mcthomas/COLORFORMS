@@ -12,10 +12,10 @@
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .entry a {
-    font-size: 6em;
+    font-size: 5.5em;
     }
     #title {
-    font-size: 8em;
+    font-size: 7.5em;
     }
 }
 /*begin:text*/
