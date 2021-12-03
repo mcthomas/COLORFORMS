@@ -2,6 +2,22 @@
   font-variant-ligatures: none;
   -webkit-font-smoothing: subpixel-antialiased;
 }
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .entry a {
+    font-size: 2.5em;
+    }
+    #title {
+    font-size: 3em;
+    }
+}
+@media only screen and (min-device-width : 481px) {
+    .entry a {
+    font-size: 2.375em;
+    }
+    #title {
+    font-size: 2.875em;
+    }
+}
 /*begin:text*/
 @font-face {
   font-family: "Hairline";
@@ -22,17 +38,6 @@
   word-spacing: -4px;
   /* Smartphones (portrait and landscape) ----------- */
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    #title {
-    font-size: 10em;
-    }
-}
- @media only screen and (min-device-width : 481px) {
-    #title {
-font-size: 2.875em;
-    }
- }
-
 body {
   margin: auto;
   background: #cccccc;
@@ -60,17 +65,6 @@ body {
   font-family: "Hairline";
   text-decoration: none;
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    .entry a {
-    font-size: 8em;
-    }
-}
-@media only screen and (min-device-width : 481px) {
-    .entry a {
-    font-size: 2.375em;
-    }
-}
-
 .entry img {
   position: relative;
   display: block;
