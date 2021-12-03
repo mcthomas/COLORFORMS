@@ -23,7 +23,7 @@
   position: relative;
   margin: auto;
   float: right;
-  bottom: 56px;
+  bottom: 57px;
   right: 17px;
   opacity: 1;
   transition: opacity 0.25s ease-in-out;
@@ -74,8 +74,8 @@ a {
   justify-content: center;
   row-gap: 29.5px;
   column-gap: 83px;
-  margin-right: 86px;
-  margin-left: 86px;
+  margin-right: 91px;
+  margin-left: 91px;
   flex: 2 0 21%;
 }
 .container img {
