@@ -2,20 +2,20 @@
   font-variant-ligatures: none;
   -webkit-font-smoothing: subpixel-antialiased;
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    .entry a {
-    font-size: 4em;
-    }
-    #title {
-    font-size: 5.5em;
-    }
-}
 @media only screen and (min-device-width : 481px) {
     .entry a {
     font-size: 2.375em;
     }
     #title {
     font-size: 2.875em;
+    }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .entry a {
+    font-size: 4em;
+    }
+    #title {
+    font-size: 5.5em;
     }
 }
 /*begin:text*/
