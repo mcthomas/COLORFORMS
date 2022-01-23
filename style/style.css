@@ -14,7 +14,8 @@
 }
 #blog {
   font-size: 20px;
-  word-spacing: .5px;
+  word-spacing: 1px;
+  letter-spacing: -.75px;
   font-family: "Thin";
   padding: 8px;
   background-color: #e2e2e2;
@@ -23,7 +24,7 @@
   position: relative;
   margin: auto;
   float: right;
-  bottom: 32px;
+  bottom: 30px;
   right: 17px;
   opacity: 1;
   transition: opacity 0.25s ease-in-out;
@@ -35,6 +36,7 @@
   font-size: 20px;
   font-family: "Thin";
   padding: 8px;
+  letter-spacing: -.25px;
   background-color: #e2e2e2;
   color: #000000;
   border-radius: 10px;
@@ -62,7 +64,7 @@ body {
   border-style: solid;
   border-color: #E2E2E2;
   border-radius: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 27px;
 }
 a {
   text-decoration: none;
@@ -90,7 +92,8 @@ a {
 }
 .serv p {
   font-size: 20px;
-  word-spacing: .5px;
+  word-spacing: 1px;
+  letter-spacing: -.75px;
   font-family: "Thin";
   color: #000000;
   margin-top: 5px;
@@ -132,7 +135,7 @@ a {
 .reset img {
   max-width: 20px;
   position: relative;
-  bottom: -70px;
+  bottom: -72px;
   margin-top: 0px;
   display: block;
   margin-left: auto;
@@ -143,7 +146,7 @@ a {
   position: relative;
   padding: 8px;
   left: 8px;
-  bottom: -21px;
+  bottom: -23px;
   transition: opacity 0.25s ease-in-out;
   -moz-transition: opacity 0.25s ease-in-out;
   -webkit-transition: opacity 0.25s ease-in-out;
