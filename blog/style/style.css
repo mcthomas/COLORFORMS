@@ -89,6 +89,8 @@ body {
   font-family: "Thin";
   text-decoration: none;
   line-height: 3;
+  padding-left: 40px;
+  padding-right: 40px;
 }
   a.date {
   font-style: normal;
