@@ -124,6 +124,8 @@ a {
   flex-shrink: 0;
   max-width: 13px;
   margin: 89px;
+  margin-right: 28px;
+  margin-left: 28px;
   flex: 0 0 13px;
 }
 .container:hover {
