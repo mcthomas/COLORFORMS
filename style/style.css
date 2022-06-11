@@ -166,19 +166,16 @@ a {
   -webkit-transition: opacity 0.25s ease-in-out;
 }
 #color-logo {
-  margin-top: 27px;
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
 #color-logo p {
-  margin-right: 22px;
-  margin-left: 30px;
-  margin-top: 20px;
+  margin-right: 42px;
+  margin-left: 49px;
+  margin-top: 50px;
   margin-bottom: 57px;
 }
-#color-logo img {
-  max-width: 220px;
-  margin-bottom: 106px;
-}
 #color-buttons img {
-  margin-bottom: 104px;
+  margin-bottom: 100px;
 }
 /*end:elements*/
