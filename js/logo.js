@@ -9,78 +9,27 @@ var output = function (input) {
     var halfLineWidth = .5*lineWidth;
     var radius = q1;
     var grad1 = [256,0,0,0];
-    
     input.setup = function () {
         input.createCanvas(winSize,winSize);
         input.frameRate(60);
     }
     input.draw = function () {
         //each rect dimensions wil be q2xlineWidth (we won't see the full spectrum at once, would require 6 rects instead of 4)
-          input.background(204,204,204);
-          color();
-          input.fill(204, 204, 204);
-          //Rounding leftmost segment, top then bottom
-          input.beginShape();
-          input.vertex(0, q1);
-          input.vertex(0, q1+7);
-          input.bezierVertex(.25*lineWidth, q1+3, .75*lineWidth, q1+3, lineWidth, q1+7);
-          input.vertex(lineWidth,q1);
-          input.vertex(0, q1);
-          input.endShape();
-          input.beginShape();
-          input.vertex(0, q3);
-          input.vertex(0, q3-7);
-          input.bezierVertex(.25*lineWidth, q3-3, .75*lineWidth, q3-3, lineWidth, q3-7);
-          input.vertex(lineWidth,q3);
-          input.vertex(0, q3);
-          input.endShape();
-          //Rounding bottom segment, left...
-          input.beginShape();
-          input.vertex(q1, winSize-lineWidth);
-          input.vertex(q1+7, winSize-lineWidth);
-          input.bezierVertex(q1+3, winSize-.75*lineWidth, q1+3, winSize-.25*lineWidth, q1+7, winSize);
-          input.vertex(q1,winSize);
-          input.vertex(q1, winSize-lineWidth);
-          input.endShape();
-          //...then right
-          input.beginShape();
-          input.vertex(q3, winSize-lineWidth);
-          input.vertex(q3-7, winSize-lineWidth);
-          input.bezierVertex(q3-3, winSize-.75*lineWidth, q3-3, winSize-.25*lineWidth, q3-7, winSize);
-          input.vertex(q3,winSize);
-          input.vertex(q3, winSize-lineWidth);
-          input.endShape();  
-          //Rouding top, left
-          input.beginShape();
-          input.vertex(q1, 0);
-          input.vertex(q1+7, 0);
-          input.bezierVertex(q1+3, .75*lineWidth, q1+3, .25*lineWidth, q1+7, lineWidth);
-          input.vertex(q1,lineWidth);
-          input.vertex(q1, 0);
-          input.endShape();
-          //...then right
-          input.beginShape();
-          input.vertex(q3, 0);
-          input.vertex(q3-7, 0);
-          input.bezierVertex(q3-3, .75*lineWidth, q3-3, .25*lineWidth, q3-7, lineWidth);
-          input.vertex(q3,lineWidth);
-          input.vertex(q3, 0);
-          input.endShape();  
-          //Rouding right, top and bottom
-          input.beginShape();
-          input.vertex(winSize-lineWidth, q1);
-          input.vertex(winSize-lineWidth, q1+7);
-          input.bezierVertex(winSize-.25*lineWidth, q1+3, winSize-.75*lineWidth, q1+3, winSize, q1+7);
-          input.vertex(winSize,q1);
-          input.vertex(winSize-lineWidth, q1);
-          input.endShape();
-          input.beginShape();
-          input.vertex(winSize-lineWidth, q3);
-          input.vertex(winSize-lineWidth, q3-7);
-          input.bezierVertex(winSize-.25*lineWidth, q3-3, winSize-.75*lineWidth, q3-3, winSize, q3-7);
-          input.vertex(winSize,q3);
-          input.vertex(winSize-lineWidth, q3);
-          input.endShape();
+        input.background(204,204,204);
+        color();
+        input.fill(204, 204, 204);
+        //Rounding left segment, top then bottom
+        roundCorners(0, q1, 0, q1+7, .25*lineWidth, q1+3, .75*lineWidth, q1+3, lineWidth, q1+7, lineWidth, q1, 0, q1);
+        roundCorners(0, q3, 0, q3-7, .25*lineWidth, q3-3, .75*lineWidth, q3-3, lineWidth, q3-7, lineWidth, q3, 0, q3);
+        //Rounding bottom segment, left then right
+        roundCorners(q1, winSize-lineWidth, q1+7, winSize-lineWidth, q1+3, winSize-.75*lineWidth, q1+3, winSize-.25*lineWidth, q1+7, winSize, q1, winSize, q1, winSize-lineWidth);
+        roundCorners(q3, winSize-lineWidth, q3-7, winSize-lineWidth, q3-3, winSize-.75*lineWidth, q3-3, winSize-.25*lineWidth, q3-7, winSize, q3, winSize, q3, winSize-lineWidth);
+        //Rounding top segment, left then right
+        roundCorners(q1, 0, q1+7, 0, q1+3, .75*lineWidth, q1+3, .25*lineWidth, q1+7, lineWidth, q1, lineWidth, q1, 0);
+        roundCorners(q3, 0, q3-7, 0, q3-3, .75*lineWidth, q3-3, .25*lineWidth, q3-7, lineWidth, q3, lineWidth, q3, 0);
+        //Rouding right segment, top then bottom
+        roundCorners(winSize-lineWidth, q1, winSize-lineWidth, q1+7, winSize-.25*lineWidth, q1+3, winSize-.75*lineWidth, q1+3, winSize, q1+7, winSize, q1, winSize-lineWidth, q1);
+        roundCorners(winSize-lineWidth, q3, winSize-lineWidth, q3-7, winSize-.25*lineWidth, q3-3, winSize-.75*lineWidth, q3-3, winSize, q3-7, winSize, q3, winSize-lineWidth, q3);
     }
     var color = function() {
       for(var i = 0; i < q2; i+=1) {
@@ -182,6 +131,15 @@ var output = function (input) {
         else {
             RGB[2] -= colInc;
         }
+    }
+    var roundCorners = function (x1, y1, x2, y2, x3, y3, x4, y4, x5, y5, x6, y6, x7, y7) {
+      input.beginShape();
+      input.vertex(x1, y1);
+      input.vertex(x2, y2);
+      input.bezierVertex(x3, y3, x4, y4, x5, y5);
+      input.vertex(x6, y6);
+      input.vertex(x7, y7);
+      input.endShape();
     }
 }
 var logoDisplay = new p5(output, "logo");
