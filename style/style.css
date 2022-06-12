@@ -117,15 +117,17 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5px;
   margin-bottom: 100px;
 }
 .serv-buttons img {
   flex-grow: 0;
   flex-shrink: 0;
   max-width: 13px;
-  margin: 89px;
   margin-right: 28px;
   margin-left: 28px;
+  margin-top: 5px;
+  margin-bottom: 100px;
   flex: 0 0 13px;
 }
 .container:hover {
@@ -167,15 +169,12 @@ a {
 }
 #color-logo {
   margin-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 #color-logo p {
   margin-right: 42px;
   margin-left: 49px;
   margin-top: 50px;
   margin-bottom: 57px;
-}
-#color-buttons img {
-  margin-bottom: 100px;
 }
 /*end:elements*/
