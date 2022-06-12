@@ -70,6 +70,7 @@ function randSketch() {
 function select(color) {
   selected = color;
   if (selected == "rButton") {
+    document.getElementById('category').innerHTML = "VIDEO"
     document.getElementById("rButton").src =
       "style/images/buttons/rButton-selected.png";
     document.getElementById("yButton").src = "style/images/buttons/yButton.png";
@@ -93,6 +94,7 @@ function select(color) {
       music[i].style.cssText = grayscaleOn;
     }
   } else if (selected == "yButton") {
+    document.getElementById('category').innerHTML = "GRAPHIC"
     document.getElementById("yButton").src =
       "style/images/buttons/yButton-selected.png";
     document.getElementById("rButton").src = "style/images/buttons/rButton.png";
@@ -116,6 +118,7 @@ function select(color) {
       music[i].style.cssText = grayscaleOn;
     }
   } else if (selected == "gButton") {
+    document.getElementById('category').innerHTML = "APP"
     document.getElementById("gButton").src =
       "style/images/buttons/gButton-selected.png";
     document.getElementById("yButton").src = "style/images/buttons/yButton.png";
@@ -139,6 +142,7 @@ function select(color) {
       music[i].style.cssText = grayscaleOn;
     }
   } else if (selected == "bButton") {
+    document.getElementById('category').innerHTML = "MUSIC"
     document.getElementById("bButton").src =
       "style/images/buttons/bButton-selected.png";
     document.getElementById("yButton").src = "style/images/buttons/yButton.png";
@@ -162,6 +166,7 @@ function select(color) {
       music[i].style.cssText = grayscaleOff;
     }
   } else {
+    document.getElementById('category').innerHTML = "&nbsp;"
     document.getElementById("rButton").src = "style/images/buttons/rButton.png";
     document.getElementById("yButton").src = "style/images/buttons/yButton.png";
     document.getElementById("gButton").src = "style/images/buttons/gButton.png";
@@ -192,6 +197,7 @@ function reset(option) {
     document.getElementById("reset").src = option;
   }
   if (option != "style/images/buttons/reset.png") {
+    document.getElementById('category').innerHTML = "&nbsp;"
     var video = document.getElementsByClassName("video");
     for (let i = 0; i < video.length; i++) {
       video[i].style.cssText = grayscaleOff;
@@ -209,6 +215,7 @@ function reset(option) {
       music[i].style.cssText = grayscaleOff;
     }
   } else {
+    document.getElementById('category').innerHTML = "&nbsp;"
     select(selected);
   }
 }
@@ -218,6 +225,7 @@ function rButton(option) {
     document.getElementById("rButton").src = option;
   }
   if (option != "style/images/buttons/rButton.png") {
+    document.getElementById('category').innerHTML = "VIDEO"
     var video = document.getElementsByClassName("video");
     for (let i = 0; i < video.length; i++) {
       video[i].style.cssText = grayscaleOff;
@@ -235,6 +243,7 @@ function rButton(option) {
       music[i].style.cssText = grayscaleOn;
     }
   } else {
+    document.getElementById('category').innerHTML = "&nbsp;"
     select(selected);
   }
 }
@@ -244,6 +253,7 @@ function yButton(option) {
     document.getElementById("yButton").src = option;
   }
   if (option != "style/images/buttons/yButton.png") {
+    document.getElementById('category').innerHTML = "GRAPHIC"
     var video = document.getElementsByClassName("video");
     for (let i = 0; i < video.length; i++) {
       video[i].style.cssText = grayscaleOn;
@@ -261,6 +271,7 @@ function yButton(option) {
       music[i].style.cssText = grayscaleOn;
     }
   } else {
+    document.getElementById('category').innerHTML = "&nbsp;"
     select(selected);
   }
 }
@@ -270,6 +281,7 @@ function gButton(option) {
     document.getElementById("gButton").src = option;
   }
   if (option != "style/images/buttons/gButton.png") {
+    document.getElementById('category').innerHTML = "APP"
     var video = document.getElementsByClassName("video");
     for (let i = 0; i < video.length; i++) {
       video[i].style.cssText = grayscaleOn;
@@ -287,6 +299,7 @@ function gButton(option) {
       music[i].style.cssText = grayscaleOn;
     }
   } else {
+    document.getElementById('category').innerHTML = "&nbsp;"
     select(selected);
   }
 }
@@ -296,6 +309,7 @@ function bButton(option) {
     document.getElementById("bButton").src = option;
   }
   if (option != "style/images/buttons/bButton.png") {
+    document.getElementById('category').innerHTML = "MUSIC"
     var video = document.getElementsByClassName("video");
     for (let i = 0; i < video.length; i++) {
       video[i].style.cssText = grayscaleOn;
@@ -313,6 +327,7 @@ function bButton(option) {
       music[i].style.cssText = grayscaleOff;
     }
   } else {
+    document.getElementById('category').innerHTML = "&nbsp;"
     select(selected);
   }
 }

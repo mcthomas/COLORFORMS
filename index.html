@@ -17,7 +17,7 @@
       content="video, graphics, creative coding, games, apps, music"
     />
     <meta name="author" content="Matt Thomas" />
-    <meta name="viewport" content= "width=792">
+    <meta name="viewport" content= "width=655">
     <script src="js/effects.js"></script>
     <script src="js/p5.js"></script>
     <script src="js/logo.js"></script>
@@ -36,12 +36,13 @@
       </div>
     </div>
 
-    <br />
+    <div class="serv">
+      <p id="category">&nbsp;</p>
+    </div>
 
-    <div id="color-buttons" class="serv-buttons">
+    <div class="serv-buttons">
       <img
         id="rButton"
-        title="VIDEO"
         onclick="select('rButton')"
         onmouseover="rButton('style/images/buttons/rButton-hover.png')"
         onmouseout="rButton('style/images/buttons/rButton.png')"
@@ -49,7 +50,6 @@
       />
       <img
         id="yButton"
-        title="GRAPHIC"
         onclick="select('yButton')"
         onmouseover="yButton('style/images/buttons/yButton-hover.png')"
         onmouseout="yButton('style/images/buttons/yButton.png')"
@@ -57,7 +57,6 @@
       />
       <img
         id="gButton"
-        title="APP"
         onclick="select('gButton')"
         onmouseover="gButton('style/images/buttons/gButton-hover.png')"
         onmouseout="gButton('style/images/buttons/gButton.png')"
@@ -65,15 +64,12 @@
       />
       <img
         id="bButton"
-        title="MUSIC"
         onclick="select('bButton')"
         onmouseover="bButton('style/images/buttons/bButton-hover.png')"
         onmouseout="bButton('style/images/buttons/bButton.png')"
         src="style/images/buttons/bButton.png"
       />
     </div>
-
-    <br />
 
     <div class="serv">
       <div class="container">
