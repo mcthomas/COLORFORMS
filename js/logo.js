@@ -148,6 +148,8 @@ var output = function (input) {
       input.endShape();
     }
     input.mousePressed = function() {
+      console.log(input.mouseX);
+      console.log(input.mouseY);
       if(!gameMode && input.mouseX > 0 && input.mouseX < winSize && input.mouseY > 0 && input.mouseY < winSize) {
         gameMode = true;
         disableKeyScroll();
@@ -201,24 +203,46 @@ var output = function (input) {
       ball.dy = collisionResolver(ball.dy);
     } 
     //The four paddle collisions
-    /*
-    if(activePaddle == "LU" && intersects(somex, somey)) {
-      reflect ball
+    if((activePaddle == "LU") && intersects(ball.x, ball.y)) {
+      ball.dx = collisionResolver(ball.dx);
     }
-    if(activePaddle == "RU" && intersects(somex, somey)) {
-      reflect ball
+    if((activePaddle == "RU") && intersects(ball.x, ball.y)) {
+      ball.dx = collisionResolver(ball.dx);
     }
-    if(activePaddle == "LD" && intersects(somex, somey)) {
-      reflect ball
+    if((activePaddle == "LD") && intersects(ball.x, ball.y)) {
+      ball.dx = collisionResolver(ball.dx);
     }
-    if(activePaddle == "RD" && intersects(somex, somey)) {
-      reflect ball
+    if((activePaddle == "RD") && intersects(ball.x, ball.y)) {
+      ball.dx = collisionResolver(ball.dx);
     }
-    */
   }
   var collisionResolver = function (axis) {
     axis = -1 * axis;
     return axis
+  }
+  var intersects = function (x, y) {
+    switch(activePaddle) {
+      case "LU":
+        if((x < 100) && (input.abs(x-y) < 50)) {
+          return true;
+        }
+        break;
+      case "RU":
+        if((x > 100) && (input.abs(x-y) < 50)) {
+          return true;
+        }
+        break;
+      case "LD":
+        if((x < 100) && (input.abs(x-y) > 150)) {
+          return true;
+        }
+        break;
+      case "RD":
+        if((x < 100) && (input.abs(x-y) > 150)) {
+          return true;
+        }
+        break
+    }
   }
   var paddleHandler = function () {
     //left 37, right 39, up 38, down 40
