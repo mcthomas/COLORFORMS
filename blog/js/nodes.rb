@@ -1,4 +1,4 @@
-  %x{console.log(window)}
+%x{console.log(window)}
   
   module P5
   def self.method_missing(name, *args)
@@ -20,10 +20,10 @@ end
 
 def setup
   P5.createCanvas(P5.windowWidth, P5.windowHeight)
-  P5.frameRate(60)
+  P5.frameRate(4)
 end
 
 def draw
-  P5.background(255,255,255)
-  end
+  P5.background(255)
+  P5.circle(100,100,100)
 end
