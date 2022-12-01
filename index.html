@@ -17,10 +17,10 @@
       content="video, graphics, creative coding, games, apps, music"
     />
     <meta name="author" content="Matt Thomas" />
-    <meta id="viewportTest" name="viewport" content="width=660">
+    <meta id="mobileViewport" name="viewport">
     <script>
-      var width = window.innerWidth + 60;
-      document.getElementById('viewportTest').setAttribute('content',`width=${width}`);
+      var width = 1.145*window.innerWidth;
+      document.getElementById('mobileViewport').setAttribute('content',`width=${width}`);
     </script>
     <script src="js/effects.js"></script>
     <script src="js/p5.js"></script>
