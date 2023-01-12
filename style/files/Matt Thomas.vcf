@@ -2,7 +2,7 @@ BEGIN:VCARD
 VERSION:3.0
 N:Thomas;Matt;;;
 FN:Matt Thomas
-ORG:Sentry Insurance;
+ORG:Muvik AI;
 TITLE:Software Developer
 item1.EMAIL;type=INTERNET;type=pref:matt.thomas2@icloud.com
 item1.X-ABLabel:email
