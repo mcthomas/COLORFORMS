@@ -13,9 +13,10 @@
     font-size: 2.875em;
     }
     #home img {
-        max-width: 20px;
-        padding: 5px;
-        padding-bottom: 3px;
+        max-width: 19px;
+        padding: 8px;
+        padding-top: 6px;
+        padding-bottom: 5px;
     }
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -37,12 +38,8 @@
 /*begin:text*/
 @font-face {
   font-family: "Hairline";
-  src: url("../../style/fonts/Hairline.ttf") format("truetype");
-  font-weight: 66;
-}
-@font-face {
-  font-family: "Thin";
-  src: url("../../style/fonts/Thin.ttf") format("truetype");
+  src: url("../../../style/fonts/Hairline.ttf") format("truetype");
+  font-weight: 100;
 }
 /*begin:layout*/
 #title {
@@ -52,7 +49,6 @@
   margin-bottom: 0px;
   letter-spacing: 8px;
   word-spacing: -4px;
-  /* Smartphones (portrait and landscape) ----------- */
 }
 body {
   margin: auto;
@@ -60,10 +56,6 @@ body {
 }
 .framed {
   min-height: 95%;
-  border-width: 14.5px;
-  border-style: solid;
-  border-color: #e2e2e2;
-  border-radius: 25px;
   text-align: center;
 }
 .entry {
@@ -73,20 +65,22 @@ body {
   background-color: #D5D5D5;
   border-radius: 14px;
   padding-top: 30px;
+  padding-bottom: 10px;
 }
 .entry a {
   color: #000000;
-  letter-spacing: 2px;
-  word-spacing: -1px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
   font-family: "Hairline";
+  letter-spacing: 1px;
   text-decoration: none;
 }
   a.sub {
   color: #000000;
   font-style: italic;
-  letter-spacing: 2px;
-  word-spacing: -1px;
-  font-family: "Thin";
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  font-family: "Hairline";
   text-decoration: none;
   line-height: 3;
   padding-left: 40px;
@@ -111,39 +105,36 @@ body {
 .contents {
   font-size: 1.375em;
   text-align: left;
-  font-family: "Thin";
-  letter-spacing: -.75px;
-  word-spacing: 1px;
+  font-family: "Hairline";
+  letter-spacing: 0px;
+  word-spacing: 0px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 32px;
   line-height: 1.5;
 }
-#footer {
+
+#home {
   position: relative;
-  margin-top: 0px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 200px;
-  margin-bottom: 16px;
-}
-#nodes {
-}
-#home {
+  margin-bottom: 25px;
   display: inline-block;
-  border: 1px solid #ffffff;
+  border: .5px solid;
+  color: #000000;
   overflow: hidden;
-  border-radius: 200px;
-  transition: opacity 0.25s ease-in-out;
-  -moz-transition: opacity 0.25s ease-in-out;
-  -webkit-transition: opacity 0.25s ease-in-out;
+  border-radius: 100%;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
-#footer :hover {
-  opacity: 0.75;
-  transition: opacity 0.25s ease-in-out;
-  -moz-transition: opacity 0.25s ease-in-out;
-  -webkit-transition: opacity 0.25s ease-in-out;
+#home:hover {
+  color: #FFFFFF;
+  border: .5px solid #FFFFFF;
+}
+#home:hover img {
+  content: url("../../style/images/home-w.png");
 }
 .fade-in {
   animation: fadeIn 10s;
