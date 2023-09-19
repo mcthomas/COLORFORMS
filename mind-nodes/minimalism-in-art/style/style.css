@@ -1,0 +1,203 @@
+:root {
+  font-variant-ligatures: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+@media only screen and (min-device-width : 481px) {
+    .entry a {
+    font-size: 2.312em;
+    }
+    a.sub {
+    font-size: 1em !important;
+    }
+    #title {
+    font-size: 2.875em;
+    }
+    #home img {
+        max-width: 19px;
+        padding: 8px;
+        padding-top: 6px;
+        padding-bottom: 5px;
+    }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .entry a {
+    font-size: 3.25em;
+    }
+    a.sub {
+    font-size: 1em !important;
+    }
+    #title {
+    font-size: 4em;
+    }
+    #home img {
+        max-width: 35px;
+        padding: 10px;
+        padding-bottom: 7px;
+    }
+}
+/*begin:text*/
+@font-face {
+  font-family: "Hairline";
+  src: url("../../../style/fonts/Hairline.ttf") format("truetype");
+  font-weight: 100;
+}
+/*begin:layout*/
+#title {
+  color: #000000;
+  font-family: "Hairline";
+  margin-top: 100px;
+  margin-bottom: 0px;
+  letter-spacing: 8px;
+  word-spacing: -4px;
+}
+body {
+  margin: auto;
+  background: #cccccc;
+}
+.framed {
+  min-height: 95%;
+  text-align: center;
+}
+.entry {
+  width: 830px;
+  margin: auto;
+  margin-top: 48px;
+  background-color: #D5D5D5;
+  border-radius: 14px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+.entry a {
+  color: #000000;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  font-family: "Hairline";
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+  a.sub {
+  color: #000000;
+  font-style: italic;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  font-family: "Hairline";
+  text-decoration: none;
+  line-height: 3;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+  a.date {
+  font-style: normal;
+}
+.entry img {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 550px;
+  max-height: 250px;
+  border-radius: 3px;
+  padding-bottom: 10px;
+}
+.header {
+  padding-top: 23px;
+}
+.contents {
+  font-size: 1.375em;
+  text-align: left;
+  font-family: "Hairline";
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 32px;
+  line-height: 1.5;
+}
+
+#home {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  margin-bottom: 25px;
+  display: inline-block;
+  border: .5px solid;
+  color: #000000;
+  overflow: hidden;
+  border-radius: 100%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+#home:hover {
+  color: #FFFFFF;
+  border: .5px solid #FFFFFF;
+}
+#home:hover img {
+  content: url("../../style/images/home-w.png");
+}
+.fade-in {
+  animation: fadeIn 10s;
+  -webkit-animation: fadeIn 10s;
+  -moz-animation: fadeIn 10s;
+  -o-animation: fadeIn 10s;
+  -ms-animation: fadeIn 10s;
+}
+.img-pair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-pair img {
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 550px;
+    max-height: 250px;
+    margin-left: 50px;
+    margin-right: 50px;
+    flex: 0 0 13px;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
