@@ -12,8 +12,15 @@
     #home img {
         max-width: 19px;
         padding: 8px;
-        padding-top: 6px;
+        padding-top: 7px;
         padding-bottom: 5px;
+    }
+    #contents p {
+      font-size: .5em;
+      letter-spacing: 0px;
+      word-spacing: 0px;
+      text-decoration: none;
+      display:inline-block;
     }
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -24,9 +31,16 @@
     font-size: 4em;
     }
     #home img {
-        max-width: 35px;
+        max-width: 25px;
         padding: 10px;
         padding-bottom: 7px;
+    }
+    #contents p {
+      font-size: .375em;
+      letter-spacing: 0px;
+      word-spacing: 0px;
+      text-decoration: none;
+      display:inline-block;
     }
 }
 /*begin:text*/
@@ -69,13 +83,6 @@ body {
   letter-spacing: 1px;
   text-decoration: none;
 } 
-#contents p {
-  font-size: .5em;
-  letter-spacing: 0px;
-  word-spacing: 0px;
-  text-decoration: none;
-  display:inline-block;
-}
 .post {
   font-size: 1.375em;
   font-family: "Hairline";
