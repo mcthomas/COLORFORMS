@@ -147,12 +147,12 @@ a {
   -webkit-transition: all 0.12s ease-in-out;
 }
 #color-logo {
-  margin-top: 100px;
-  margin-bottom: 80px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 #color-logo p {
-  margin-right: 42px;
-  margin-left: 49px;
+  margin-right: -8px;
+  margin-left: -1px;
   margin-top: 50px;
   margin-bottom: 57px;
 }
