@@ -26,7 +26,7 @@ var output = function (input) {
     let out = new Audio('style/sounds/out.mp3');
     out.volume = 0.025;
     input.preload = function () {
-      hairline = input.loadFont('style/fonts/Hairline.ttf')
+      hairlineMedium = input.loadFont('style/fonts/Hairline-medium.ttf')
       loseImg = input.loadImage('style/images/lose.png');
     }
     input.setup = function () {
@@ -198,7 +198,7 @@ var output = function (input) {
     }
     var drawStats = function () {
       input.translate(-50, -50, 0);
-      input.textFont(hairline);
+      input.textFont(hairlineMedium);
       input.textSize(18);
       input.textAlign(input.RIGHT);
       if(gameOver) {
@@ -314,7 +314,7 @@ var output = function (input) {
       var vel = input.abs(ball.dx) + input.abs(ball.dy)
       score += (10 * vel);
       if(vel < 10) {
-        colInc += .015;
+        colInc += .0175;
         if(coord < 0) {
           return (-1 * coord) + .5;
         }
@@ -560,6 +560,9 @@ var output = function (input) {
   input.touchStarted = function () {
     touchX = input.mouseX;
     touchY = input.mouseY;
+    if(!gameMode && touchX > 0 && touchX < winSize && touchY > 0 && touchY < winSize) {
+      gameMode = true;
+    }
   }
   input.touchEnded = function () {
     touchX = winSize / 2;
