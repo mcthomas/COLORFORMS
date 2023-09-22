@@ -294,7 +294,7 @@ var output = function (input) {
     nodeNavigate();
   }
 
-  input.touchStarted = function () {
+  input.touchEnded = function () {
     nodeNavigate();
   }
 
