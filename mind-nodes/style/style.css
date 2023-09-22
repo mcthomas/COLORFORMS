@@ -26,7 +26,7 @@
       padding-left: 250px;
     }
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width : 200px) and (max-device-width : 480px) {
     #contents a {
     font-size: 3.25em;
     }
@@ -34,7 +34,7 @@
     font-size: 4em;
     }
     .post img {
-      max-width: 27px;
+      max-width: 29px;
       display:inline-block;
     }
     #home {
@@ -139,7 +139,6 @@ body {
   font-family: "Hairline";
   letter-spacing: 0px;
   word-spacing: 0px;
-  padding-left: 200px;
   line-height: 0;
   text-align: left;
 }
