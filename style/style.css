@@ -28,7 +28,7 @@
   }
   .reset img {
     max-width: 35px;
-    bottom: -6px;
+    bottom: -10px;
   }
   .serv-buttons img {
     max-width: 20px;
@@ -36,7 +36,7 @@
     margin-left: 23px;
   }
   .serv p {
-    font-size: 30px;
+    font-size: 25px;
   }
   #percentage {
     font-size: 30px;

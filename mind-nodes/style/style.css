@@ -19,8 +19,8 @@
     #home img {
         max-width: 19px;
         padding: 8px;
-        padding-top: 7px;
-        padding-bottom: 5px;
+        padding-top: 6px;
+        padding-bottom: 6px;
     }
     .post {
       padding-left: 250px;
@@ -34,7 +34,7 @@
     font-size: 4em;
     }
     .post img {
-      max-width: 25px;
+      max-width: 27px;
       display:inline-block;
     }
     #home {
@@ -47,7 +47,7 @@
         padding-bottom: 14px;
     }
     .post {
-      padding-left: 200px;
+      padding-left: 175px;
     }
 }
 /*begin:text*/

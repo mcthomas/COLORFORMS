@@ -291,6 +291,14 @@ var output = function (input) {
   }
 
   input.mouseClicked = function () {
+    nodeNavigate();
+  }
+
+  input.touchStarted = function () {
+    nodeNavigate();
+  }
+
+  function nodeNavigate() {
     for (var i = 0; i < nodes.length; i++) {
       var halfDiameter = .5 * nodes[i][0]
       if((input.mouseX > (nodes[i][1] - halfDiameter) && input.mouseX < (nodes[i][1] + halfDiameter)) 
