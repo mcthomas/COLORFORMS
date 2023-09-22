@@ -189,6 +189,7 @@ var output = function (input) {
           score = 0;
           balls = 3;
           gameMode = false;
+          restoreHighlight();
         }
         else {
           drawStats();
@@ -561,12 +562,53 @@ var output = function (input) {
     touchX = input.mouseX;
     touchY = input.mouseY;
     if(!gameMode && touchX > 0 && touchX < winSize && touchY > 0 && touchY < winSize) {
+      wall.volume = 0.025;
+      paddle.volume = 0.025;
+      out.volume = 0.025;
       gameMode = true;
+      var htmlElement = document.documentElement;
+      var bodyElement = document.body;
+      if (htmlElement) {
+          htmlElement.style.webkitTouchCallout = "none";
+          htmlElement.style.webkitUserSelect = "none";
+          htmlElement.style.khtmlUserSelect = "none";
+          htmlElement.style.mozUserSelect = "none";
+          htmlElement.style.msUserSelect = "none";
+          htmlElement.style.userSelect = "none";
+      }
+      if (bodyElement) {
+          bodyElement.style.webkitTouchCallout = "none";
+          bodyElement.style.webkitUserSelect = "none";
+          bodyElement.style.khtmlUserSelect = "none";
+          bodyElement.style.mozUserSelect = "none";
+          bodyElement.style.msUserSelect = "none";
+          bodyElement.style.userSelect = "none";
+      }
     }
   }
   input.touchEnded = function () {
     touchX = winSize / 2;
     touchY = winSize / 2;
+  }
+  var restoreHighlight = function () {
+    var htmlElement = document.documentElement;
+    var bodyElement = document.body;
+    if (htmlElement) {
+        htmlElement.style.webkitTouchCallout = "";
+        htmlElement.style.webkitUserSelect = "";
+        htmlElement.style.khtmlUserSelect = "";
+        htmlElement.style.mozUserSelect = "";
+        htmlElement.style.msUserSelect = "";
+        htmlElement.style.userSelect = "";
+    }
+    if (bodyElement) {
+        bodyElement.style.webkitTouchCallout = "";
+        bodyElement.style.webkitUserSelect = "";
+        bodyElement.style.khtmlUserSelect = "";
+        bodyElement.style.mozUserSelect = "";
+        bodyElement.style.msUserSelect = "";
+        bodyElement.style.userSelect = "";
+    }
   }
   var disableKeyScroll = function () {
     window.addEventListener("keydown", function(e) {

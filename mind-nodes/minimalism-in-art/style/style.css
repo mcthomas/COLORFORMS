@@ -12,6 +12,9 @@
     #title {
     font-size: 2.875em;
     }
+    #home {
+      border: .5px solid;
+    }
     #home img {
         max-width: 19px;
         padding: 8px;
@@ -29,10 +32,14 @@
     #title {
     font-size: 4em;
     }
+    #home {
+      border: 1.5px solid;
+    }
     #home img {
-        max-width: 25px;
-        padding: 10px;
-        padding-bottom: 7px;
+        max-width: 38px;
+        padding: 16px;
+        padding-top: 13px;
+        padding-bottom: 14px;
     }
 }
 /*begin:text*/
@@ -122,7 +129,6 @@ body {
   margin-top: 200px;
   margin-bottom: 25px;
   display: inline-block;
-  border: .5px solid;
   color: #000000;
   overflow: hidden;
   border-radius: 100%;
