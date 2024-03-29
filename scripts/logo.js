@@ -1,8 +1,7 @@
-var output = function (input) {
+var logoOutput = function (input) {
     var winSize = 220;
     touchX = winSize / 2;
     touchY = winSize / 2;
-    var gameMode = false;
     var particleCollisions = [];
     ball = null;
     var balls = 3;
@@ -48,7 +47,7 @@ var output = function (input) {
       //Rouding right segment, top then bottom
       roundCorners(winSize-lineWidth, q1, winSize-lineWidth, q1+7, winSize-.25*lineWidth, q1+3, winSize-.75*lineWidth, q1+3, winSize, q1+7, winSize, q1, winSize-lineWidth, q1);
       roundCorners(winSize-lineWidth, q3, winSize-lineWidth, q3-7, winSize-.25*lineWidth, q3-3, winSize-.75*lineWidth, q3-3, winSize, q3-7, winSize, q3, winSize-lineWidth, q3);
-      if(gameMode){
+      if(window.gameMode){
         game();
       }
     }
@@ -163,8 +162,8 @@ var output = function (input) {
       input.endShape();
     }
     input.mousePressed = function() {
-      if(!gameMode && input.mouseX > 0 && input.mouseX < winSize && input.mouseY > 0 && input.mouseY < winSize) {
-        gameMode = true;
+      if(!window.gameMode && input.mouseX > 0 && input.mouseX < winSize && input.mouseY > 0 && input.mouseY < winSize) {
+        window.gameMode = true;
         disableKeyScroll();
       }
     }
@@ -185,7 +184,7 @@ var output = function (input) {
           gameOver = false;
           score = 0;
           balls = 3;
-          gameMode = false;
+          window.gameMode = false;
           restoreHighlight();
         }
         else {
@@ -261,20 +260,20 @@ var output = function (input) {
     }
   var collisionDetector = function () {
     //The four wall collisions; padding of 5 added for center-ball tracking radius
-    if((ball.x-5 <= lineWidth) && (ball.y+5 >= q1) && (ball.y-5 <= q3)) {
+    if((ball.x-5 <= lineWidth) && (ball.y+6 >= q1) && (ball.y-6 <= q3)) {
       ball.dx = collisionResolver(ball.dx);
     } 
-    if((ball.x+5 >= winSize - lineWidth) && (ball.y+5 >= q1) && (ball.y-5 <= q3)) {
+    else if((ball.x+5 >= winSize - lineWidth) && (ball.y+6 >= q1) && (ball.y-6 <= q3)) {
       ball.dx = collisionResolver(ball.dx);
     } 
-    if((ball.x+5 >= q1) && (ball.x-5 <= q3) && (ball.y-5 <= lineWidth)) {
+    else if((ball.x+6 >= q1) && (ball.x-6 <= q3) && (ball.y-5 <= lineWidth)) {
       ball.dy = collisionResolver(ball.dy);
     } 
-    if((ball.x+5 >= q1) && (ball.x-5 <= q3) && (ball.y+5 >= winSize - lineWidth)) {
+    else if((ball.x+6 >= q1) && (ball.x-6 <= q3) && (ball.y+5 >= winSize - lineWidth)) {
       ball.dy = collisionResolver(ball.dy);
     } 
     //The four paddle collisions
-    if(intersects(ball.x, ball.y)) {
+    else if(intersects(ball.x, ball.y)) {
       collisionResolver();
     }
   }
@@ -558,8 +557,8 @@ var output = function (input) {
   input.touchStarted = function () {
     touchX = input.mouseX;
     touchY = input.mouseY;
-    if(!gameMode && touchX > 0 && touchX < winSize && touchY > 0 && touchY < winSize) {
-      gameMode = true;
+    if(!window.gameMode && touchX > 0 && touchX < winSize && touchY > 0 && touchY < winSize) {
+      window.gameMode = true;
       var htmlElement = document.documentElement;
       var bodyElement = document.body;
       if (htmlElement) {
@@ -612,4 +611,4 @@ var output = function (input) {
     }, false);
   }
 }
-var logoDisplay = new p5(output, "logo");
+var logoDisplay = new p5(logoOutput, "logo");
