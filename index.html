@@ -22,14 +22,38 @@
       var width = .675*window.innerWidth;
       document.getElementById('mobileViewport').setAttribute('content',`width=${width}`);
     </script>
+    <script type="text/javascript">
+      var gameMode = false;
+    </script>
     <script src="scripts/effects.js"></script>
     <script src="scripts/p5.min.js"></script>
     <script src="scripts/logo.js"></script>
+    <script src="scripts/neko.js"></script>
   </head>
 
-  <body class="framed" onload="randSketch()">
-    <div id="percentage"></div>
+<body onload="randSketch()">
 
+  <script id="nekoScript" src="https://webneko.net/n20171213.js"></script>
+
+  <div id="hideNeko"></div>
+
+  <script>
+    function removeLayerWhenNekoExists() {
+      let intervalId = setInterval(function () {
+        if (aNekos[0]) {
+          aNekos[0].layer.parentNode.removeChild(aNekos[0].layer);
+          document.getElementById("hideNeko").remove();
+          clearInterval(intervalId);
+        }
+      }, 100);
+    }
+    removeLayerWhenNekoExists();
+  </script>
+
+  <h1 id="nl"></h1>
+
+    <div id="body-float"></div>
+    <div id="percentage"></div>
     <div id="color-logo" class="title-serv">
       <div id="title">
         <p>color</p>
@@ -39,7 +63,6 @@
         <p>forms</p>
       </div>
     </div>
-
     <div class="serv">
       <p id="category">&nbsp;</p>
     </div>
@@ -221,11 +244,6 @@
         <p>Green Screen Pseudo-Animation</p>
       </div>
     </a>
-
-      <div class="container">
-        <p></p>
-        <iframe width="350" height="197.20" frameborder="0"></iframe>
-      </div>
 
       <div class="container">
         <p></p>

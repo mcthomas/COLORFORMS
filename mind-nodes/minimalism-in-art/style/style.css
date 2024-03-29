@@ -17,8 +17,9 @@
     }
     #home img {
         max-width: 19px;
+        max-height: 17px;
         padding: 8px;
-        padding-top: 6px;
+        padding-top: 7px;
         padding-bottom: 6px;
     }
 }
@@ -37,8 +38,9 @@
     }
     #home img {
         max-width: 38px;
+        max-height: 36px;
         padding: 16px;
-        padding-top: 13px;
+        padding-top: 14px;
         padding-bottom: 14px;
     }
 }
