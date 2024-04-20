@@ -175,9 +175,11 @@ var logoOutput = function (input) {
         drawStats();
         checkGameOver();
         drawParticles();
+        if(ball != null) {
+          collisionDetector();
+          paddleHandler();
+        }
         drawBall();
-        collisionDetector();
-        paddleHandler();
       }
       else {
         if((input.millis() - startTime) > 2500) {
@@ -368,6 +370,7 @@ var logoOutput = function (input) {
     }
   }
   var paddleHandler = function () {
+    input.noStroke();
     if (input.keyIsDown(37) && input.keyIsDown(38) && !input.keyIsDown(39) && !input.keyIsDown(40)) {
       //LU
       input.fill(175, 175, 175);

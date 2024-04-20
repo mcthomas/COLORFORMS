@@ -25,13 +25,13 @@
 }
 @media only screen and (min-device-width : 200px) and (max-device-width : 480px) {
     .entry a {
-    font-size: 3.25em;
+    font-size: 3.9em;
     }
     a.sub {
-    font-size: 1em !important;
+    font-size: 1.2em !important;
     }
     #title {
-    font-size: 4em;
+    font-size: 4.8em;
     }
     #home {
       border: 1.5px solid;
