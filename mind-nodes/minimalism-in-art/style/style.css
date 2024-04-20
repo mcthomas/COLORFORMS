@@ -3,6 +3,9 @@
   -webkit-font-smoothing: subpixel-antialiased;
 }
 @media only screen and (min-device-width : 481px) {
+    .contents {
+      font-size: 1.375em;
+    }
     .entry a {
     font-size: 2.312em;
     }
@@ -24,14 +27,17 @@
     }
 }
 @media only screen and (min-device-width : 200px) and (max-device-width : 480px) {
+    .contents {
+      font-size: 2.3em;
+    }
     .entry a {
-    font-size: 3.9em;
+    font-size: 3.25em;
     }
     a.sub {
-    font-size: 1.2em !important;
+    font-size: 1.3em !important;
     }
     #title {
-    font-size: 4.8em;
+    font-size: 4em;
     }
     #home {
       border: 1.5px solid;
@@ -112,7 +118,6 @@ body {
   padding-top: 23px;
 }
 .contents {
-  font-size: 1.375em;
   text-align: left;
   font-family: "Hairline";
   letter-spacing: 0px;
