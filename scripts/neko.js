@@ -22,7 +22,6 @@ function konamiCodeHandler(event) {
 				behavior: 'smooth'
 			});
             function delayNeko() {
-                var newNeko = new Neko(window.innerWidth / 2 - 18, 380, false);
                 var poof = document.createElement('img');
                 var poofSound = new Audio('../style/sounds/poof.m4a');
                 poof.src = "../style/images/poof.gif";
@@ -32,11 +31,15 @@ function konamiCodeHandler(event) {
                 poof.style.top = 365 + 'px';
                 document.body.appendChild(poof);
                 poofSound.play();
+                setTimeout(displayNeko, 250);
+            }
+            function displayNeko() {
+                var newNeko = new Neko(window.innerWidth / 2 - 18, 380, false);
                 document.addEventListener('mousemove', function(event) {
                     newNeko.active = true;
                 });
             }
-            setTimeout(delayNeko, 1000)
+            setTimeout(delayNeko, 1000);
             index = 0;
         }
     } else {
