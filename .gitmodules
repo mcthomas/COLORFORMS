@@ -1,3 +1,6 @@
 [submodule "arwing"]
 	path = arwing
 	url = git@github.com:mcthomas/webgl-arwing.git
+[submodule "mondrian-generator"]
+	path = mondrian-generator
+	url = git@github.com:mcthomas/de-stijl-generator.git
