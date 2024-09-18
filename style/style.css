@@ -71,6 +71,8 @@
   font-size: 40px;
   font-family: "Hairline";
   letter-spacing: 8px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 .nav-btn {
   word-spacing: 0px;
