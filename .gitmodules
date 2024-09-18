@@ -10,3 +10,6 @@
 [submodule "train"]
 	path = train
 	url = git@github.com:mcthomas/simple-canvas-train.git
+[submodule "flight"]
+	path = flight
+	url = git@github.com:mcthomas/flight-path.git
