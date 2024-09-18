@@ -4,3 +4,9 @@
 [submodule "mondrian-generator"]
 	path = mondrian-generator
 	url = git@github.com:mcthomas/de-stijl-generator.git
+[submodule "simple-canvas-train"]
+	path = simple-canvas-train
+	url = git@github.com:mcthomas/simple-canvas-train.git
+[submodule "train"]
+	path = train
+	url = git@github.com:mcthomas/simple-canvas-train.git
