@@ -12,6 +12,7 @@
     .post img {
       max-width: 18px;
       display:inline-block;
+      margin-bottom: -0.5px;
     }
     #home {
       border: .5px solid;
@@ -21,10 +22,6 @@
         padding: 8px;
         padding-top: 7px;
         padding-bottom: 5px;
-    }
-    .post {
-      font-size: 1.375em;
-      padding-left: 40px;
     }
 }
 @media only screen and (min-device-width : 200px) and (max-device-width : 480px) {
@@ -37,6 +34,7 @@
     .post img {
       max-width: 29px;
       display:inline-block;
+      margin-bottom: -0.5px;
     }
     #home {
       border: 1.5px solid;
@@ -46,10 +44,6 @@
         padding: 16px;
         padding-top: 14px;
         padding-bottom: 14px;
-    }
-    .post {
-      font-size: 1em;
-      padding-left: 40px;
     }
 }
 /*begin:text*/
@@ -104,6 +98,8 @@ body {
   transition: color 0.15s ease-in-out;
   -moz-transition: color 0.15s ease-in-out;
   -webkit-transition: color 0.15s ease-in-out;
+  mask-image: none;
+  -webkit-mask-image: none;
 }
 .post:hover img {
   content: url("./images/bkmk-w.png");
@@ -142,6 +138,14 @@ body {
   word-spacing: 0px;
   line-height: 0;
   text-align: left;
+  font-size: 1.375em;
+  white-space: nowrap;
+  overflow: scroll;
+  margin-right: 35px;
+  padding-left: 30px;
+  overflow-y: hidden; 
+  mask-image: linear-gradient(to left, transparent, black 5%);
+  mask-image: -webkit-linear-gradient(right, transparent, black 5%);
 }
 @keyframes fadeIn {
   0% {
