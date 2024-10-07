@@ -7,7 +7,8 @@ var output = function (input) {
     [255, 45, 85], [255, 59, 48], [255, 149, 0], [255, 204, 0], [142, 142, 147]
   ];
   var blogLinks = [
-    "https://colorforms.works/mind-nodes/minimalism-in-art"
+    "https://colorforms.works/mind-nodes/minimalism-in-art",
+    "https://colorforms.works/mind-nodes/three-aesthetically-classic-braun-products-you-can-buy-today"
   ];
   var lastNodeHovered = null;
 

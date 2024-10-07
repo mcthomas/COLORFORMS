@@ -23,7 +23,7 @@
         max-height: 17px;
         padding: 8px;
         padding-top: 7px;
-        padding-bottom: 6px;
+        padding-bottom: 5px;
     }
 }
 @media only screen and (min-device-width : 200px) and (max-device-width : 480px) {
@@ -54,7 +54,7 @@
 @font-face {
   font-family: "Hairline";
   src: url("../../../style/fonts/Hairline.ttf") format("truetype");
-  font-weight: 100;
+  font-weight: 150;
 }
 /*begin:layout*/
 #title {
