@@ -7,23 +7,23 @@
       font-size: 1.375em;
     }
     .entry a {
-    font-size: 2.312em;
+      font-size: 2.312em;
     }
     a.sub {
-    font-size: 1em !important;
+      font-size: 1em !important;
     }
     #title {
-    font-size: 2.875em;
+      font-size: 2.875em;
     }
     #home {
       border: .5px solid;
     }
     #home img {
-        max-width: 19px;
-        max-height: 17px;
-        padding: 8px;
-        padding-top: 7px;
-        padding-bottom: 5px;
+      max-width: 19px;
+      max-height: 17px;
+      padding: 8px;
+      padding-top: 7px;
+      padding-bottom: 5px;
     }
 }
 @media only screen and (min-device-width : 200px) and (max-device-width : 480px) {
@@ -116,6 +116,9 @@ body {
 }
 .header {
   padding-top: 23px;
+  display: inline-block;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .contents {
   text-align: left;
