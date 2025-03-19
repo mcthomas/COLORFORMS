@@ -46,7 +46,7 @@
 @font-face {
   font-family: "Hairline";
   src: url("fonts/Hairline.ttf") format("truetype");
-  font-weight: 100;
+  font-weight: 130;
 }
 #blog {
   float: right;
