@@ -45,7 +45,7 @@
 /*begin:text*/
 @font-face {
   font-family: "Hairline";
-  src: url("fonts/Hairline.ttf") format("truetype");
+  src: url("fonts/Aileron-Thin.otf") format("opentype");
   font-weight: 130;
 }
 #blog {

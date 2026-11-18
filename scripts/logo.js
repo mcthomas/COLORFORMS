@@ -22,7 +22,7 @@ var logoOutput = function (input) {
     let paddle = new Audio('style/sounds/paddle.mp3');
     let out = new Audio('style/sounds/out.mp3');
     input.preload = function () {
-      hairlineMedium = input.loadFont('style/fonts/Hairline-medium.ttf')
+      hairlineMedium = input.loadFont('style/fonts/Aileron-Regular.otf')
       loseImg = input.loadImage('style/images/lose.png');
     }
     input.setup = function () {
