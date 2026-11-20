@@ -3,17 +3,16 @@ var output = function (input) {
   var toBeRemoved = 0;
   var toBeAdded = 0;
   var colors = [
-    [88, 86, 214], [0, 122, 255], [52, 170, 220], [90, 200, 250], [76, 217, 100],
-    [255, 45, 85], [255, 59, 48], [255, 149, 0], [255, 204, 0], [142, 142, 147]
+    [255, 59, 48], [255, 149, 0], [255, 204, 0],
+    [42, 173, 67], [0, 122, 255], [125, 82, 224]
   ];
-  var blogLinks = [
-    "https://colorforms.works/mind-nodes/minimalism-in-art",
-    "https://colorforms.works/mind-nodes/three-aesthetically-classic-braun-products-you-can-buy-today"
-  ];
+  // Post links for each color, filled in from the contents list on the page.
+  var postLinks = colors.map(function () { return []; });
   var lastNodeHovered = null;
 
   input.setup = function () {
     input.createCanvas(900, 200);
+    readPosts();
     nodes = initializeNodes();
   };
 
@@ -27,16 +26,85 @@ var output = function (input) {
     drawNodes();
   };
 
+  // A post is linked from the nodes that share its bookmark icon's color, so a
+  // post added to the contents list is picked up without any change here.
+  function readPosts() {
+    var posts = document.querySelectorAll('#contents a[href]');
+    for (var i = 0; i < posts.length; i++) {
+      var icon = posts[i].querySelector('.post img');
+      if (icon && icon.complete) {
+        registerPost(posts[i].href, icon);
+      } else if (icon) {
+        icon.addEventListener('load', registerPost.bind(null, posts[i].href, icon));
+      }
+    }
+  }
+
+  function registerPost(href, icon) {
+    var colorIndex = bookmarkColor(icon);
+    if (colorIndex >= 0) {
+      postLinks[colorIndex].push(href);
+    }
+  }
+
+  // Index in `colors` of the color closest to the icon's own, or -1.
+  function bookmarkColor(icon) {
+    try {
+      var canvas = document.createElement('canvas');
+      canvas.width = icon.naturalWidth;
+      canvas.height = icon.naturalHeight;
+      var context = canvas.getContext('2d');
+      context.drawImage(icon, 0, 0);
+      var pixels = context.getImageData(0, 0, canvas.width, canvas.height).data;
+      var sum = [0, 0, 0];
+      var count = 0;
+      for (var p = 0; p < pixels.length; p += 4) {
+        if (pixels[p + 3] > 200) {
+          sum[0] += pixels[p];
+          sum[1] += pixels[p + 1];
+          sum[2] += pixels[p + 2];
+          count++;
+        }
+      }
+      if (count > 0) {
+        var closest = -1;
+        var closestDistance = Infinity;
+        for (var c = 0; c < colors.length; c++) {
+          var distance = Math.pow(sum[0] / count - colors[c][0], 2) +
+            Math.pow(sum[1] / count - colors[c][1], 2) +
+            Math.pow(sum[2] / count - colors[c][2], 2);
+          if (distance < closestDistance) {
+            closest = c;
+            closestDistance = distance;
+          }
+        }
+        return closest;
+      }
+    } catch (e) {
+      // The image can't be read when the page is opened straight from disk.
+    }
+    // Fall back to the icon's number: bkmk-1.png is the first color, and so on.
+    var number = /(\d+)\.\w+$/.exec(icon.getAttribute('src') || '');
+    return number ? (parseInt(number[1], 10) - 1) % colors.length : -1;
+  }
+
+  // The post a node leads to, if any post has its color.
+  function nodeLink(node) {
+    var links = postLinks[node[14]];
+    return links.length ? links[Math.floor(node[15] * links.length)] : null;
+  }
+
   function initializeNodes() {
     var nodeCount = 5 + Math.floor(Math.random() * 11);
     var initializedNodes = [];
     for (var i = 0; i < nodeCount; i++) {
-      var currColor = colors[Math.floor(Math.random() * 10)];
+      var colorIndex = Math.floor(Math.random() * colors.length);
+      var currColor = colors[colorIndex];
       initializedNodes.push([
         10, 25 + Math.floor(Math.random() * 876), 25 + Math.floor(Math.random() * 156),
         -0.5 + Math.random(), -0.5 + Math.random(), 0, 0,
         false, false, false, false, [currColor[0], currColor[1], currColor[2], 256],
-        false, false
+        false, false, colorIndex, Math.random()
       ]);
     }
     return initializedNodes;
@@ -83,12 +151,13 @@ var output = function (input) {
   }
 
   function createNode() {
-    var currColor = colors[Math.floor(Math.random() * 10)];
+    var colorIndex = Math.floor(Math.random() * colors.length);
+    var currColor = colors[colorIndex];
     nodes.push([
       10, 25 + Math.floor(Math.random() * 876), 25 + Math.floor(Math.random() * 156),
       -0.5 + Math.random(), -0.5 + Math.random(), 0, 0,
       false, false, false, false, [currColor[0], currColor[1], currColor[2], 1],
-      false, false
+      false, false, colorIndex, Math.random()
     ]);
   }
 
@@ -188,6 +257,10 @@ var output = function (input) {
   function drawNodes() {
     for (var i = 0; i < nodes.length; i++) {
       input.noStroke();
+      // Clear what is under the node, as far as the node is opaque, so no line shows through it.
+      input.erase(Math.min(255, nodes[i][11][3]), 0);
+      input.circle(nodes[i][1], nodes[i][2], nodes[i][0]);
+      input.noErase();
       input.fill(
         nodes[i][11][0],
         nodes[i][11][1],
@@ -197,7 +270,8 @@ var output = function (input) {
       input.circle(nodes[i][1], nodes[i][2], nodes[i][0]);
       var halfDiameter = .5 * nodes[i][0]
       if((input.mouseX > (nodes[i][1] - halfDiameter) && input.mouseX < (nodes[i][1] + halfDiameter)) 
-      && (input.mouseY > (nodes[i][2] - halfDiameter) && input.mouseY < (nodes[i][2] + halfDiameter))) {
+      && (input.mouseY > (nodes[i][2] - halfDiameter) && input.mouseY < (nodes[i][2] + halfDiameter))
+      && nodeLink(nodes[i])) {
         document.documentElement.style.cursor = 'pointer';
         lastNodeHovered = i;
       }
@@ -206,6 +280,17 @@ var output = function (input) {
         lastNodeHovered = null;
       }
     }
+  }
+
+  // Draws a line between two circles that stops at each circle's edge.
+  function edgeLine(x1, y1, r1, x2, y2, r2) {
+    var d = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    if (d <= r1 + r2) {
+      return;
+    }
+    var ux = (x2 - x1) / d;
+    var uy = (y2 - y1) / d;
+    input.line(x1 + ux * r1, y1 + uy * r1, x2 - ux * r2, y2 - uy * r2);
   }
 
   function connections() {
@@ -220,7 +305,7 @@ var output = function (input) {
           256,
           nodes[i][11][3] * (1 - mouseDistance / 100.0)
         );
-        input.line(nodes[i][1], nodes[i][2], input.mouseX, input.mouseY);
+        edgeLine(nodes[i][1], nodes[i][2], nodes[i][0] / 2, input.mouseX, input.mouseY, 0);
         if (nodes[i][1] > input.mouseX) {
           nodes[i][3] -= 0.01 * (1 - mouseDistance / 100.0);
         } else if (nodes[i][1] < input.mouseX) {
@@ -271,7 +356,7 @@ var output = function (input) {
           } else {
             input.stroke(256, 256, 256, 256 * (1 - distance / 100.0));
           }
-          input.line(nodes[i][1], nodes[i][2], nodes[j][1], nodes[j][2]);
+          edgeLine(nodes[i][1], nodes[i][2], nodes[i][0] / 2, nodes[j][1], nodes[j][2], nodes[j][0] / 2);
           if (nodes[i][1] > nodes[j][1]) {
             nodes[i][3] -= 0.001 * (1 - distance / 100.0) * (nodes[j][0] / 15);
             nodes[j][3] += 0.001 * (1 - distance / 100.0) * (nodes[i][0] / 15);
@@ -303,8 +388,9 @@ var output = function (input) {
     for (var i = 0; i < nodes.length; i++) {
       var halfDiameter = .5 * nodes[i][0]
       if((input.mouseX > (nodes[i][1] - halfDiameter) && input.mouseX < (nodes[i][1] + halfDiameter)) 
-      && (input.mouseY > (nodes[i][2] - halfDiameter) && input.mouseY < (nodes[i][2] + halfDiameter))) {
-        window.open(blogLinks[Math.floor(Math.random()*blogLinks.length)]);
+      && (input.mouseY > (nodes[i][2] - halfDiameter) && input.mouseY < (nodes[i][2] + halfDiameter))
+      && nodeLink(nodes[i])) {
+        window.open(nodeLink(nodes[i]));
       }
     }
   }

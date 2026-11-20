@@ -1,6 +1,12 @@
 :root {
   font-variant-ligatures: none;
   -webkit-font-smoothing: subpixel-antialiased;
+  --ink-rgb: 0,0,0;
+  --fg: #000000;
+  --edge: rgba(var(--ink-rgb),0.25);
+  --edge-hover: rgba(var(--ink-rgb),0.40);
+  --edge-press: rgba(var(--ink-rgb),0.55);
+  --radius: 7px;
 }
 @media only screen and (min-device-width : 481px) {
   .nav-btn {
@@ -18,13 +24,11 @@
   .serv p {
     font-size: 20px;
   }
-  #percentage {
-    font-size: 20px;
-  }
 }
 @media only screen and (min-device-width : 200px) and (max-device-width : 480px) {
   .nav-btn {
     font-size: 30px;
+    padding: 8px 10px;
   }
   .reset img {
     max-width: 35px;
@@ -38,14 +42,16 @@
   .serv p {
     font-size: 25px;
   }
-  #percentage {
-    font-size: 30px;
-  }
 }
 /*begin:text*/
 @font-face {
   font-family: "Hairline";
   src: url("fonts/Aileron-Thin.otf") format("opentype");
+  font-weight: 130;
+}
+@font-face {
+  font-family: "Light";
+  src: url("fonts/Aileron-Light.otf") format("opentype");
   font-weight: 130;
 }
 #blog {
@@ -55,15 +61,6 @@
 #contact {
   float: left;
   left: 30px;
-}
-#percentage {
-  position: fixed;
-  font-family: "Hairline";
-  letter-spacing: 0px;
-  color: #000000;
-  right: 28px;
-  top: 22px;
-  opacity: 0;
 }
 #title {
   text-transform: uppercase;
@@ -77,20 +74,19 @@
 .nav-btn {
   word-spacing: 0px;
   letter-spacing: 0px;
-  font-family: "Hairline";
-  padding: 8px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  border: .5px solid #000000;
-  color: #000000;
-  border-radius: 5px;
+  font-family: "Light";
+  padding: 6px 12px;
+  border: 1.5px solid var(--edge);
+  color: var(--fg);
+  background: transparent;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(var(--ink-rgb),0.12), 0 0 0 0.5px rgba(var(--ink-rgb),0.06);
+  cursor: pointer;
   position: relative;
   margin: auto;
   bottom: 30px;
   opacity: 1;
-  transition: all 0.15s ease-in-out;
-  -moz-transition: all 0.15s ease-in-out;
-  -webkit-transition: all 0.15s ease-in-out;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .reset img {
   position: relative;
@@ -130,10 +126,14 @@ a {
   -moz-transition: all 0.15s ease-in-out;
   -webkit-transition: all 0.15s ease-in-out;
 }
+/* The empty block after the last project always takes a row of its own. */
+.spacer {
+  flex-basis: 100%;
+}
 .serv p {
   word-spacing: 0px;
   letter-spacing: 0px;
-  font-family: "Hairline";
+  font-family: "Light";
   margin-top: 5px;
 }
 /*begin:elements*/
@@ -173,11 +173,25 @@ a {
   -webkit-transition: opacity 0.15s ease-in-out;
 }
 .nav-btn:hover {
-  color: #FFFFFF;
-  border: .5px solid #FFFFFF;
-  transition: all 0.12s ease-in-out;
-  -moz-transition: all 0.12s ease-in-out;
-  -webkit-transition: all 0.12s ease-in-out;
+  border-color: var(--edge-hover);
+  box-shadow: 0 0.5px 2px rgba(var(--ink-rgb),0.18);
+}
+a:active > .nav-btn,
+.nav-btn:active {
+  border-color: var(--edge-press);
+  box-shadow: inset 0 1px 3px rgba(var(--ink-rgb),0.15);
+}
+a:has(> .nav-btn):focus-visible {
+  outline: none;
+}
+a:focus-visible > .nav-btn {
+  outline: 1.5px solid var(--fg);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-btn {
+    transition: none;
+  }
 }
 #color-logo {
   margin-top: 50px;

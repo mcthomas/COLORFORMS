@@ -1,6 +1,12 @@
 :root {
   font-variant-ligatures: none;
   -webkit-font-smoothing: subpixel-antialiased;
+  --ink-rgb: 0,0,0;
+  --fg: #000000;
+  --edge: rgba(var(--ink-rgb),0.25);
+  --edge-hover: rgba(var(--ink-rgb),0.40);
+  --edge-press: rgba(var(--ink-rgb),0.55);
+  --radius: 7px;
 }
 @media only screen and (min-device-width : 481px) {
     .contents {
@@ -16,14 +22,13 @@
       font-size: 2.875em;
     }
     #home {
-      border: .5px solid;
+      width: 37px;
+      height: 37px;
     }
-    #home img {
-      max-width: 19px;
-      max-height: 17px;
-      padding: 8px;
-      padding-top: 7px;
-      padding-bottom: 5px;
+    #home svg {
+      width: 19px;
+      stroke-width: 1.24px;
+      margin-bottom: 2px;
     }
 }
 @media only screen and (min-device-width : 200px) and (max-device-width : 480px) {
@@ -40,20 +45,19 @@
     font-size: 4em;
     }
     #home {
-      border: 1.5px solid;
+      width: 72px;
+      height: 72px;
     }
-    #home img {
-        max-width: 38px;
-        max-height: 36px;
-        padding: 16px;
-        padding-top: 14px;
-        padding-bottom: 14px;
+    #home svg {
+      width: 38px;
+      stroke-width: 1.86px;
+      margin-bottom: 4px;
     }
 }
 /*begin:text*/
 @font-face {
   font-family: "Hairline";
-  src: url("../../../style/fonts/Aileron-Thin.otf") format("opentype");
+  src: url("../../../style/fonts/Aileron-ThinLight.otf") format("opentype");
   font-weight: 150;
 }
 /*begin:layout*/
@@ -133,24 +137,58 @@ body {
 
 #home {
   position: relative;
-  display: block;
+  box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
   margin-top: 200px;
   margin-bottom: 25px;
   display: inline-block;
-  color: #000000;
+  color: var(--fg);
+  background: transparent;
   overflow: hidden;
-  border-radius: 100%;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  border: 1.5px solid var(--edge);
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(var(--ink-rgb),0.12), 0 0 0 0.5px rgba(var(--ink-rgb),0.06);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+#home a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+#home svg {
+  display: block;
+  height: auto;
+  overflow: visible;
+  fill: none;
+  stroke: var(--fg);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+#home path {
+  vector-effect: non-scaling-stroke;
 }
 #home:hover {
-  color: #FFFFFF;
-  border: .5px solid #FFFFFF;
+  border-color: var(--edge-hover);
+  box-shadow: 0 0.5px 2px rgba(var(--ink-rgb),0.18);
 }
-#home:hover img {
-  content: url("../../style/images/home-w.png");
+#home:active {
+  border-color: var(--edge-press);
+  box-shadow: inset 0 1px 3px rgba(var(--ink-rgb),0.15);
+}
+#home a:focus-visible {
+  outline: none;
+}
+#home:has(a:focus-visible) {
+  outline: 1.5px solid var(--fg);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  #home {
+    transition: none;
+  }
 }
 .fade-in {
   animation: fadeIn 10s;
