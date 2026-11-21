@@ -29,7 +29,7 @@
     }
     #home svg {
       width: 19px;
-      stroke-width: 1.24px;
+      stroke-width: 1px;
       margin-bottom: 2px;
     }
 }
@@ -54,7 +54,7 @@
     }
     #home svg {
       width: 38px;
-      stroke-width: 1.86px;
+      stroke-width: 0.85px;
       margin-bottom: 4px;
     }
 }
@@ -64,15 +64,10 @@
   src: url("../../style/fonts/Aileron-ThinLight.otf") format("opentype");
   font-weight: 150;
 }
-@font-face {
-  font-family: "Thin";
-  src: url("../../style/fonts/Aileron-Thin.otf") format("opentype");
-  font-weight: 150;
-}
 /*begin:layout*/
 #title {
   color: #000000;
-  font-family: "Thin";
+  font-family: "Hairline";
   margin-top: 100px;
   margin-bottom: 0px;
   letter-spacing: 8px;
@@ -144,13 +139,14 @@ body {
   width: 100%;
   height: 100%;
 }
+/* The path is the outline of thin, square-ended lines. The stroke around it
+   rounds the corners and brings the lines up to full weight. */
 #home svg {
   display: block;
   height: auto;
   overflow: visible;
-  fill: none;
+  fill: var(--fg);
   stroke: var(--fg);
-  stroke-linecap: round;
   stroke-linejoin: round;
 }
 #home path {

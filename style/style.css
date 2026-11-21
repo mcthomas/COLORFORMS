@@ -126,9 +126,18 @@ a {
   -moz-transition: all 0.15s ease-in-out;
   -webkit-transition: all 0.15s ease-in-out;
 }
+/* Projects fill fixed columns from the left, so a short last row lines up with
+   the columns above it. The columns are centered as a group. */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+}
+.projects p {
+  white-space: nowrap;
+}
 /* The empty block after the last project always takes a row of its own. */
 .spacer {
-  flex-basis: 100%;
+  grid-column: 1 / -1;
 }
 .serv p {
   word-spacing: 0px;
@@ -202,6 +211,10 @@ a:focus-visible > .nav-btn {
   margin-left: -1px;
   margin-top: 50px;
   margin-bottom: 57px;
+}
+/* p5 adds a "Loading..." message while the logo sketch preloads its files. */
+#p5_loading {
+  display: none;
 }
 #body-float {
   position: fixed;
