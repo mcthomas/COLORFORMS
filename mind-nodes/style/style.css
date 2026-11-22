@@ -3,10 +3,15 @@
   -webkit-font-smoothing: subpixel-antialiased;
   --ink-rgb: 0,0,0;
   --fg: #000000;
-  --edge: rgba(var(--ink-rgb),0.25);
-  --edge-hover: rgba(var(--ink-rgb),0.40);
-  --edge-press: rgba(var(--ink-rgb),0.55);
+  /* Buttons follow the Primary design system: a glass ring at 0.33 → 0.67 hover → 1.0 press; a shadow outside
+     at rest, none on hover, inside on press; ring, shadow and glyph stroke all scaled from a 44px glyph button. */
+  --edge-rest: rgba(var(--ink-rgb),0.33);
+  --edge-hover: rgba(var(--ink-rgb),0.67);
+  --edge-press: rgba(var(--ink-rgb),1.0);
+  --shade-out: rgba(var(--ink-rgb),0.33);
+  --shade-in: rgba(var(--ink-rgb),0.30);
   --radius: 7px;
+  --dp: 0.01px;   /* one device pixel; set by scripts/line-weight.js */
 }
 @media only screen and (min-device-width : 481px) {
     #contents a {
@@ -24,13 +29,7 @@
       margin-bottom: -0.5px;
     }
     #home {
-      width: 37px;
-      height: 37px;
-    }
-    #home svg {
-      width: 19px;
-      stroke-width: 1px;
-      margin-bottom: 2px;
+      --d: 37;
     }
 }
 @media only screen and (min-device-width : 200px) and (max-device-width : 480px) {
@@ -49,13 +48,7 @@
       margin-bottom: -0.5px;
     }
     #home {
-      width: 72px;
-      height: 72px;
-    }
-    #home svg {
-      width: 38px;
-      stroke-width: 0.85px;
-      margin-bottom: 4px;
+      --d: 72;
     }
 }
 /*begin:text*/
@@ -124,13 +117,20 @@ body {
   margin-top: 200px;
   margin-bottom: 25px;
   display: inline-block;
+  /* A glyph button: ring, shadow and glyph scaled from the 44px reference by its size, --d */
+  --ring: max(var(--dp), round(nearest, calc(1.5px * var(--d) / 44), var(--dp)));
+  --blur: calc(2.5px * var(--d) / 44);
+  --gw: calc(19px * var(--d) / 44);   /* a wide glyph: 19 of the system's 28 units across */
+  --edge: var(--edge-rest);
+  width: calc(var(--d) * 1px);
+  height: calc(var(--d) * 1px);
   color: var(--fg);
   background: transparent;
   overflow: hidden;
-  border: 1.5px solid var(--edge);
+  border: 0;
   border-radius: 50%;
-  box-shadow: 0 1px 3px rgba(var(--ink-rgb),0.12), 0 0 0 0.5px rgba(var(--ink-rgb),0.06);
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: inset 0 0 0 var(--ring) var(--edge), 0 0 var(--blur) var(--shade-out);
+  transition: box-shadow 0.18s ease;
 }
 #home a {
   display: flex;
@@ -139,11 +139,14 @@ body {
   width: 100%;
   height: 100%;
 }
-/* The path is the outline of thin, square-ended lines. The stroke around it
-   rounds the corners and brings the lines up to full weight. */
+/* The path is the outline of thin, square-ended lines, 26 of its 982 units wide. The stroke around it
+   rounds the corners and brings the lines up to the ring's weight. */
 #home svg {
   display: block;
+  width: var(--gw);
   height: auto;
+  margin-bottom: calc(var(--gw) * 0.105);
+  stroke-width: calc(var(--ring) - var(--gw) * 26 / 982);
   overflow: visible;
   fill: var(--fg);
   stroke: var(--fg);
@@ -153,12 +156,12 @@ body {
   vector-effect: non-scaling-stroke;
 }
 #home:hover {
-  border-color: var(--edge-hover);
-  box-shadow: 0 0.5px 2px rgba(var(--ink-rgb),0.18);
+  --edge: var(--edge-hover);
+  box-shadow: inset 0 0 0 var(--ring) var(--edge);
 }
 #home:active {
-  border-color: var(--edge-press);
-  box-shadow: inset 0 1px 3px rgba(var(--ink-rgb),0.15);
+  --edge: var(--edge-press);
+  box-shadow: inset 0 0 0 var(--ring) var(--edge), inset 0 0 var(--blur) var(--ring) var(--shade-in);
 }
 #home a:focus-visible {
   outline: none;

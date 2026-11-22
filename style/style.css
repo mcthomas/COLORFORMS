@@ -3,14 +3,22 @@
   -webkit-font-smoothing: subpixel-antialiased;
   --ink-rgb: 0,0,0;
   --fg: #000000;
-  --edge: rgba(var(--ink-rgb),0.25);
-  --edge-hover: rgba(var(--ink-rgb),0.40);
-  --edge-press: rgba(var(--ink-rgb),0.55);
+  /* Buttons follow the Primary design system: a glass ring at 0.33 → 0.67 hover → 1.0 press; a shadow outside
+     at rest, none on hover, inside on press; ring, shadow and glyph stroke all scaled from a 44px glyph button. */
+  --edge-rest: rgba(var(--ink-rgb),0.33);
+  --edge-hover: rgba(var(--ink-rgb),0.67);
+  --edge-press: rgba(var(--ink-rgb),1.0);
+  --shade-out: rgba(var(--ink-rgb),0.33);
+  --shade-in: rgba(var(--ink-rgb),0.30);
   --radius: 7px;
+  --text-d: 34;
+  --label-size: 17.5px;
+  --label-weight: 400;
+  --dp: 0.01px;   /* one device pixel; set by scripts/line-weight.js */
 }
 @media only screen and (min-device-width : 481px) {
-  .nav-btn {
-    font-size: 20px;
+  :root {
+    --text-d: 34;
   }
   .reset img {
     max-width: 20px;
@@ -26,9 +34,8 @@
   }
 }
 @media only screen and (min-device-width : 200px) and (max-device-width : 480px) {
-  .nav-btn {
-    font-size: 30px;
-    padding: 8px 10px;
+  :root {
+    --text-d: 51;
   }
   .reset img {
     max-width: 35px;
@@ -44,6 +51,10 @@
   }
 }
 /*begin:text*/
+@font-face { font-family: "Aileron"; font-weight: 100; src: url("fonts/Aileron-Thin.otf") format("opentype"); }
+@font-face { font-family: "Aileron"; font-weight: 200; src: url("fonts/Aileron-ThinLight.otf") format("opentype"); }
+@font-face { font-family: "Aileron"; font-weight: 300; src: url("fonts/Aileron-Light.otf") format("opentype"); }
+@font-face { font-family: "Aileron"; font-weight: 400; src: url("fonts/Aileron-Regular.otf") format("opentype"); }
 @font-face {
   font-family: "Hairline";
   src: url("fonts/Aileron-Thin.otf") format("opentype");
@@ -71,22 +82,34 @@
   padding-left: 3px;
   padding-right: 3px;
 }
+/* A word button. Its ring, shadow and label stem are one weight, scaled from its nominal height (--text-d);
+   height and side padding follow the label so the outline never stands off from it. */
 .nav-btn {
+  --d: var(--text-d);
+  --ring: max(var(--dp), round(nearest, calc(1.5px * var(--d) / 44), var(--dp)));
+  --blur: calc(2.5px * var(--d) / 44);
+  --edge: var(--edge-rest);
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: round(nearest, calc(var(--label-size) * 1.94), 1px);
+  padding: 0 round(nearest, calc(var(--label-size) * 0.9), 1px);
   word-spacing: 0px;
   letter-spacing: 0px;
-  font-family: "Light";
-  padding: 6px 12px;
-  border: 1.5px solid var(--edge);
+  font-family: "Aileron";
+  font-size: var(--label-size);
+  font-weight: var(--label-weight);
+  border: 0;
   color: var(--fg);
   background: transparent;
   border-radius: var(--radius);
-  box-shadow: 0 1px 3px rgba(var(--ink-rgb),0.12), 0 0 0 0.5px rgba(var(--ink-rgb),0.06);
+  box-shadow: inset 0 0 0 var(--ring) var(--edge), 0 0 var(--blur) var(--shade-out);
   cursor: pointer;
   position: relative;
   margin: auto;
   bottom: 30px;
   opacity: 1;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: box-shadow 0.18s ease;
 }
 .reset img {
   position: relative;
@@ -182,13 +205,13 @@ a {
   -webkit-transition: opacity 0.15s ease-in-out;
 }
 .nav-btn:hover {
-  border-color: var(--edge-hover);
-  box-shadow: 0 0.5px 2px rgba(var(--ink-rgb),0.18);
+  --edge: var(--edge-hover);
+  box-shadow: inset 0 0 0 var(--ring) var(--edge);
 }
 a:active > .nav-btn,
 .nav-btn:active {
-  border-color: var(--edge-press);
-  box-shadow: inset 0 1px 3px rgba(var(--ink-rgb),0.15);
+  --edge: var(--edge-press);
+  box-shadow: inset 0 0 0 var(--ring) var(--edge), inset 0 0 var(--blur) var(--ring) var(--shade-in);
 }
 a:has(> .nav-btn):focus-visible {
   outline: none;
@@ -215,6 +238,32 @@ a:focus-visible > .nav-btn {
 /* p5 adds a "Loading..." message while the logo sketch preloads its files. */
 #p5_loading {
   display: none;
+}
+/* The logo sketch's canvas is 320px square (scripts/logo.js). Holding that space
+   from the start keeps the title words still, and the canvas fades in once p5 adds it.
+   The extra 5px is the gap the canvas used to leave under itself, so the page below
+   sits where it always has. */
+#logo {
+  flex: 0 0 320px;
+  width: 320px;
+  height: 325px;
+}
+#logo canvas {
+  display: block;
+  animation: logo-fade-in 0.8s ease-out both;
+}
+@keyframes logo-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #logo canvas {
+    animation: none;
+  }
 }
 #body-float {
   position: fixed;
