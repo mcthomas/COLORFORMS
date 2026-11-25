@@ -97,17 +97,16 @@ body {
   text-decoration: none;
   display:inline-block;
 }
+/* On hover the bookmark icon turns white; the title stays black. */
 .post:hover {
-  color: #FFFFFF;
-  transition: color 0.15s ease-in-out;
-  -moz-transition: color 0.15s ease-in-out;
-  -webkit-transition: color 0.15s ease-in-out;
   mask-image: none;
   -webkit-mask-image: none;
 }
+.post img {
+  transition: filter 0.15s ease-in-out;
+}
 .post:hover img {
   filter: brightness(0) invert(1);
-  transition: filter 0.15s ease-in-out;
 }
 #home {
   position: relative;
@@ -120,7 +119,7 @@ body {
   /* A glyph button: ring, shadow and glyph scaled from the 44px reference by its size, --d */
   --ring: max(var(--dp), round(nearest, calc(1.5px * var(--d) / 44), var(--dp)));
   --blur: calc(2.5px * var(--d) / 44);
-  --gw: calc(19px * var(--d) / 44);   /* a wide glyph: 19 of the system's 28 units across */
+  --gw: calc(22px * var(--d) / 44);   /* the house glyph: 22 of the system's 28 units across */
   --edge: var(--edge-rest);
   width: calc(var(--d) * 1px);
   height: calc(var(--d) * 1px);
